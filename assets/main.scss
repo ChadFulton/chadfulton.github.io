@@ -1,0 +1,16 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+// Colors
+$c1: #333;
+$c2: #555;
+$c3: #888;
+$c4: #aaa;
+$c5: #eee;
+
+// Base imports
+@import "bootstrap";
+@import "fa";
+@import "syntax_highlighting";
+@import "ui";

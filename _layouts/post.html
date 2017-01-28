@@ -1,0 +1,48 @@
+---
+layout: default
+---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <section class="post-header lead-section compact">
+    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+
+    {% if page.superseded %}
+    <p class="superseded"><b>Deprecation</b> - this notebook has been superseded by "<a href="{{ site.url }}{{ page.superseded.link }}">{{ page.superseded.name }}</a>".</p>
+    {% endif %}
+
+    {% if page.related %}
+    <div class="related">
+    <p><b>Related topics</b> - you may also be interested in the following related notebooks:</p>
+    <ul>
+    {% for post in page.related %}
+    <li>
+      <a href="{{ site.url }}{{ post.link }}">{{ post.name }}</a>
+      {% if post.description %}{{ post.description | markdownify }}{% endif %}
+    </li>
+    {% endfor %}
+    </ul>
+    </div>
+    {% endif %}
+
+    {{ content }}
+  </section>
+
+  <section class="post-content compact" itemprop="articleBody">
+  {% if page.notebook %}
+
+  <div class="toc">
+  <h3>Table of Contents</h3>
+  {% capture toc %}{% include notebooks/toc/{{ page.notebook }}.md %}{% endcapture %}
+  {{ toc | markdownify }}
+  </div>
+
+  {% capture notebook %}{% include notebooks/{{ page.notebook }}.md %}{% endcapture %}
+  {{ notebook | markdownify }}
+  {% endif %}
+  </section>
+
+  {% if site.disqus.shortname %}
+    {% include disqus_comments.html %}
+  {% endif %}
+</article>

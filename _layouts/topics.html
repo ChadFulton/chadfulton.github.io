@@ -1,0 +1,50 @@
+---
+layout: default
+---
+
+<div class="topics">
+
+  <!-- <section id="topics" class="lead-section compact">
+
+  <h1 class="page-heading">{{ page.title }}</h1>
+  
+  {{ content }}
+
+  </section> -->
+
+  <section id="topics-notebooks">
+
+  <h2>Notebooks <span class="rss-subscribe"> (subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a>)</span></h2>
+
+  <p>The pages below document certain specific topics usually related to time
+  series analysis in Python. Usually they are Jupyter Notebooks, rendered into
+  HTML for this website.</p>
+
+  <p><b>Note</b>: all notebooks are kept for historical context, and so as time
+  has passed some have been superseded by others. Notes have been added to
+  indicate where this has happened.</p>
+
+  {% assign prev_year = site.posts[0].date | date: "%Y" %}
+  <h3>{{ prev_year }}</h3>
+  <ul class="post-list">
+  {% for post in site.posts %}
+    
+  {% assign post_year = post.date | date: "%Y" %}
+  {% if post_year != prev_year %}
+    {% assign prev_year = post_year %}
+    </ul>
+    <h3>{{ post_year }}</h3>
+    <ul class="post-list">
+  {% endif %}
+    <li>
+        <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        {% if post.superseded %}
+        <p class="superseded">(superseded by "<a href="{{ site.url }}{{ post.superseded.link }}">{{ post.superseded.name }}</a>")</p>
+        {% endif %}
+    </li>
+  {% endfor %}
+  </ul>
+
+  </section>
+
+</div>

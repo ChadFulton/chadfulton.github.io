@@ -1,0 +1,131 @@
+body
+    min-width: 930px
+    background: url(images/textures/crossword.png)
+    font-family: 'Open Sans', sans-serif
+    color: #333
+
+a
+    color: #415CB5
+    text-decoration: none
+    
+    &:hover
+        text-decoration: underline
+    
+h1, h2, h3, h4, h5, h6
+    font-family: Merriweather
+    font-weight: bold
+
+h1, h2
+    font-size: 130%
+
+h3
+    font-size: 110%
+
+sup
+    font-size: 80%
+
+// Header Styles
+header.site-header
+    background: #f5f5f5
+
+    .wrapper
+        margin: 0px 25px
+        padding: 0 15px
+        padding-top: 9px
+        padding-bottom: 7px
+
+    h1
+        font-size: 150%
+        color: $c2
+        font-weight: 300
+        margin: auto 0px
+
+        a
+            color: $c2
+            
+            &:hover
+                text-decoration: none
+                    
+        span
+            float: right
+            margin-right: 150px
+            padding-top: 5px
+            font-size: 60%
+
+    .social
+        float: right
+        margin-top: 5px
+
+        a
+            color: #555
+        
+        #github
+            z-index: 10
+            position: absolute
+            right: 0
+            top: 0
+            border: 0
+            
+
+nav.site-nav
+    text-align: center
+    padding: 8px 5px
+    background-color: #fff
+    border-top: 1px solid #ddd
+
+    .wrapper
+        position: relative
+        z-index: 10
+    
+    a
+        margin: 0px 20px
+        font-size: 120%
+        color: $c2
+
+        &:hover
+            color: $c1
+            text-decoration: none
+
+            span.fa-stack
+                color: $c2
+        
+        &.active
+            color: $c1
+            
+            span.fa-stack
+                color: $c2
+                    
+        span.fa-stack
+            color: $c3
+            margin-top: -3px
+            margin-left: 10px
+            font-size: 75%
+
+// Article styles
+article.post
+    p.superseded
+        padding: 5px 7px
+        background-color: #f5f5f5
+        border: 1px solid #ddd
+
+    div.related
+        margin-bottom: 10px
+        padding: 5px 7px
+        background-color: #f5f5f5
+        border: 1px solid #ddd
+
+    div.toc
+        margin-bottom: 10px
+        padding: 5px 7px
+        background-color: #f5f5f5
+        border: 1px solid #ddd
+
+        h3
+            margin-top: 10px
+            border-bottom: 1px solid #ddd
+
+// Footer Styles
+footer.site-footer
+    display: none
+
+@import "sections"

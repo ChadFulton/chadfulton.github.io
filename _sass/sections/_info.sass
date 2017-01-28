@@ -1,0 +1,191 @@
+section#about
+    table.timeline
+
+        tr.dates td
+            // Table spans 1986 - 2019 = 34 years
+            &.y86-04
+                width: ((2016.5px - 1986px) / 34px) * 100%
+            &.y15-20
+                width: ((2020px - 2016.5px) / 34px) * 100%
+
+        tr.items td
+            &.birth span
+                margin-left: -1.0em
+            &.now span
+                margin-left: -1.4em
+
+    div.at-a-glance
+        width: 1100px
+        margin: auto
+        color: $c2
+
+        div
+            width: 740px
+            float: left
+            margin-right: 60px
+
+        table
+            margin-top: 10px
+            width: 740px
+
+            td, th
+                padding: 0px
+                border: 0px
+
+            td
+                padding-top: 10px
+
+            tr: first-child td
+                padding-top: 0px
+
+            td.left
+
+                text-align: right
+                font-weight: bold
+
+                span
+                    padding-right: 15px
+                    padding-left: 10px
+            
+            td.right
+                border-bottom: 1px solid #ddd
+                span
+                    padding-right: 10px
+
+            tr.continuation
+                td
+                    padding-top: 0px
+
+        p.job-market
+            margin-top: 30px
+            margin-left: 100px
+
+        .info
+            margin-left: 70px
+            margin-top: 20px
+            text-align: center
+            font-size: 95%
+
+            span.spacer
+                padding: 0px 20px
+                color: #ddd
+                font-size: 120%
+
+            a
+                i
+                    padding-right: 5px
+
+                &:hover
+                    text-decoration: none
+
+            .footnotes
+                width: 90%
+                margin-left: 30px
+                padding-top: 5px
+                border-top: 1px dotted #ddd
+                font-size: 80%
+                color: $c3
+                text-align: left
+
+                p
+                    margin: 0px
+
+    .sections
+        display: none
+        margin: 20px 0px
+        text-align: center
+        a
+            display: inline-block
+            margin: 0px 100px
+
+            span
+                font-size: 130%
+                color: #777
+
+            .fa-circle
+                display: none
+
+            .fa-arrow-down
+                color: #777
+
+            &:hover
+                text-decoration: none
+
+                .fa-circle
+                    display: inline-block
+
+                .fa-arrow-down
+                    color: #fff
+
+                
+
+section#education
+
+    table.timeline
+
+        tr.dates td
+            // Table spans 1986 - 2019 = 34 years
+            &.y86-90
+                width: ((1990px - 1986px) / 34px) * 100%
+            &.y91-04
+                width: ((2004px - 1991px) / 34px) * 100%
+            &.y05-08
+                width: ((2008px - 2005px) / 34px) * 100%
+            &.y09-11
+                width: ((2011px - 2009px) / 34px) * 100%
+            &.y12-15
+                width: ((2015px - 2012px) / 34px) * 100%
+            &.y16-20
+                width: ((2020px - 2016px) / 34px) * 100%
+
+        tr.items td
+            &.birth span
+                margin-left: -1.0em
+            &.ps span
+                margin-left: -2.2em
+            &.hs span
+                margin-left: -3em
+            &.ba span
+                margin-left: -2em
+            &.ms span
+                margin-left: -2em
+            &.phd span
+                margin-left: -2.5em
+
+section#experience
+    margin-top: 50px
+
+    table.timeline
+
+        tr.dates td
+            // Table spans 2008 - 2016 = 8 years
+            &.y08-09
+                width: ((2008.5px - 2008px) / 8px) * 100%
+            &.y09-10
+                width: ((2010px - 2009px) / 8px) * 100%
+                span
+                    margin-left: -2.4em
+            &.y11-12
+                width: ((2012px - 2010.5px) / 8px) * 100%
+                span
+                    margin-left: -2.4em
+            &.y13-14
+                width: ((2014px - 2013px) / 8px) * 100%
+            &.y14-15
+                width: ((2015px - 2014px) / 8px) * 100%
+            &.y15-16
+                width: ((2016px - 2015px) / 8px) * 100%
+
+        tr.items td
+            &.ba span
+                margin-left: -1.5em
+            &.ec span
+                margin-left: -3.5em
+            &.ee span
+                margin-left: -4.75em
+            &.gs2013 span
+                margin-left: -3em
+            &.gs2014 span
+                margin-left: -3em
+            &.gs2015 span
+                margin-left: -3em
