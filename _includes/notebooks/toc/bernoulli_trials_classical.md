@@ -1,0 +1,5 @@
+-   [Setup](#setup)
+-   [Likelihood function](#likelihood-function)
+-   [Maximum Likelihood Estimation](#maximum-likelihood-estimation)
+-   [Appendix](#appendix)
+
