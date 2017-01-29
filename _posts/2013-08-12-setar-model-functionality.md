@@ -2,7 +2,7 @@
 layout: post
 title:  "SETAR Model Functionality"
 date:   2013-08-12 09:31:32 -07:00
-categories: python
+categories: time-series python statsmodels regime-switching
 permalink: /topics/setar_model_functionality.html
 redirect_from: /posts/setar_model_functionality.html
 notebook: tsa_setar_sunspots_full

@@ -2,7 +2,7 @@
 layout: post
 title:  "State space diagnostics"
 date:   2015-06-07 15:21:30 -07:00
-categories: python
+categories: time-series python statsmodels state-space hypothesis-tests
 permalink: /topics/state_space_diagnostics.html
 redirect_from: /posts/state_space_diagnostics.html
 notebook: state_space_diagnostics

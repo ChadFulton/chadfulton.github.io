@@ -2,7 +2,7 @@
 layout: post
 title:  "Unobserved components"
 date:   2015-05-24 09:57:01 -07:00
-categories: python
+categories: time-series unobserved-components
 permalink: /topics/unobserved_components.html
 redirect_from: /posts/unobserved_components.html
 ---

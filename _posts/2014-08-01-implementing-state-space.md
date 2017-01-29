@@ -2,7 +2,7 @@
 layout: post
 title:  "Implementing state space models for Statsmodels"
 date:   2014-08-01 06:02:42 -07:00
-categories: python
+categories: time-series python statsmodels state-space arima local-linear-trend
 permalink: /topics/implementing_state_space.html
 redirect_from: /code.html
 notebook: code_state_space

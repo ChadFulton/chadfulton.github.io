@@ -2,7 +2,7 @@
 layout: post
 title:  "Bernoulli Trials in Python: Bayesian Estimation"
 date:   2013-10-24 13:38:41 -07:00
-categories: python
+categories: python bernoulli-trials bayesian metropolis-hastings
 permalink: /topics/bernoulli_trials_bayesian.html
 redirect_from: /posts/bernoulli_trials_bayesian.html
 notebook: bernoulli_trials_bayesian

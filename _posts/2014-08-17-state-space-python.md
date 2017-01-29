@@ -2,7 +2,7 @@
 layout: post
 title:  "State space modeling in Python"
 date:   2014-08-17 11:58:04 -07:00
-categories: python
+categories: time-series python statsmodels state-space maximum-likelihood local-linear-trend
 permalink: /topics/state_space_python.html
 redirect_from: /posts/state_space_python.html
 notebook: state_space_python

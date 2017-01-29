@@ -2,7 +2,7 @@
 layout: post
 title:  "Estimating a Real Business Cycle DSGE Model by Maximum Likelihood in Python"
 date:   2015-06-21 09:37:01 -07:00
-categories: python
+categories: time-series python statsmodels state-space maximum-likelihood real-business-cycle dsge-model
 permalink: /topics/estimating_rbc.html
 redirect_from: /posts/estimating_rbc.html
 notebook: estimating_rbc

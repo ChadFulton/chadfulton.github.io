@@ -2,7 +2,7 @@
 layout: post
 title:  "Markov-switching - Hamilton (1989) Markov Switching Model of GNP"
 date:   2013-08-12 09:31:32 -07:00
-categories: python
+categories: time-series python statsmodels regime-switching
 permalink: /topics/mar_hamilton.html
 redirect_from: /posts/mar_hamilton.html
 notebook: mar_hamilton

@@ -2,7 +2,7 @@
 layout: post
 title:  "Kalman Filter Initialization - The Stationary Case"
 date:   2014-06-23 00:06:18 -07:00
-categories: python
+categories: time-series python statsmodels state-space
 permalink: /topics/kalman_init_stationary.html
 redirect_from: /posts/kalman_init_stationary.html
 notebook: kalman_filter_initialization_stationary

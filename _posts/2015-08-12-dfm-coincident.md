@@ -2,7 +2,7 @@
 layout: post
 title:  "Dynamic factors and coincident indices"
 date:   2015-08-12 10:46:49 -07:00
-categories: python
+categories: time-series python statsmodels state-space maximum-likelihood dynamic-factors
 permalink: /topics/dfm_coincident.html
 redirect_from: /posts/dfm_coincident.html
 notebook: dfm_coincident
