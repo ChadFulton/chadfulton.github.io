@@ -6,8 +6,9 @@ categories: time-series python statsmodels state-space maximum-likelihood bayesi
 permalink: /topics/simple_rbc.html
 notebook: simple_rbc
 related:
-    - name: "Markov switching autoregression models"
-      link: /topics/markov_autoregression.html
+    - name: "Estimating a Real Business Cycle DSGE Model by Maximum Likelihood in Python"
+      link: /topics/estimating_rbc.html
+      description: a more complete look at formulating, solving, and estimating (by maximum likelihood) this same RBC model
 ---
 
 This notebook collects the full example implementing and estimating (via maximum likelihood, Metropolis-Hastings, and Gibbs Sampling) a simple real business cycle model, from my working paper [Estimating time series models by state space methods in Python: Statsmodels]({{ "/research.html#est-ssm-py" | relative_url }}).
