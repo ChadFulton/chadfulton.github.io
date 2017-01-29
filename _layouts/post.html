@@ -4,7 +4,7 @@ layout: default
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <section class="post-header lead-section compact">
-    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}{% if page.notebook %}<span class="notebook-github-header">(<a href="https://github.com/ChadFulton/tsa-notebooks/blob/master/{{ page.notebook }}.ipynb">View / download notebook</a> | <a href="https://github.com/ChadFulton/tsa-notebooks/issues/new">Report a problem</a>)</span>{% endif %}</h1>
     <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
 
     {% if page.superseded %}
@@ -42,7 +42,22 @@ layout: default
   {% endif %}
   </section>
 
+  {% if page.notebook %}
+  <section class="compact">
+    <h3>Meta for "{{ page.title | escape }}"</h3>
+
+    <div class="notebook-github-footer">
+    <ul>
+    <li><a href="https://github.com/ChadFulton/tsa-notebooks/blob/master/{{ page.notebook }}.ipynb">View or download this notebook on Github</a></li>
+    <li>Please <a href="https://github.com/ChadFulton/tsa-notebooks/issues/new">let me know if you noticed any bugs or problems with this notebook.</a></li>
+    </ul>
+    </div>
+  </section>
+  {% endif %}
+
+  <section>
   {% if site.disqus.shortname %}
     {% include disqus_comments.html %}
   {% endif %}
+  </section>
 </article>
