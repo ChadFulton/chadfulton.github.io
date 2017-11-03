@@ -16,7 +16,18 @@ econometrics.
 
 ## Working papers
 
+- [Mechanics of linear quadratic Gaussian rational inattention tracking problems](#fulton_mechanics_ri_2017)
 - [Estimating time series models by state space methods in Python: Statsmodels](#est-ssm-py)
+
+</section>
+
+<section id="fulton_mechanics_ri_2017">
+
+## Mechanics of linear quadratic Gaussian rational inattention tracking problems
+
+This paper presents a general framework for constructing and solving the multivariate static linear quadratic Gaussian (LQG) rational inattention tracking problem. We interpret the nature of the solution and the implied action of the agent, and we construct representations that formalize how the agent processes data. We apply this infrastructure to the rational inattention price-setting problem, confirming the result that a conditional response to economics shocks is possible, but casting doubt on a common assumption made in the literature. We show that multiple equilibria and a social cost of increased attention can arise in these models. We consider the extension to the dynamic problem and provide an approximate solution method that achieves low approximation error for many applications found in the LQG rational inattention literature.
+
+- [Working paper (PDF)](https://www.federalreserve.gov/econres/feds/files/2017109pap.pdf)
 
 </section>
 
