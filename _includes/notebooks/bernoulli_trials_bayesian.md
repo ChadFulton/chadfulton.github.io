@@ -309,7 +309,7 @@ Although I am not an expert in MATLAB, a pretty much direct port of this code to
 
 
 
-```python
+```cython
 %%cython
 
 import numpy as np

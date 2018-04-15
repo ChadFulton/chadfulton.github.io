@@ -320,6 +320,19 @@ parameters.T
 
 
 <div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -397,6 +410,19 @@ steady_state.T
 
 
 <div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -503,6 +529,19 @@ steady_state.T
 
 
 <div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -602,6 +641,19 @@ display(pd.DataFrame(mod4.C(), index=equation_names, columns=[r'$\varepsilon_t$'
 
 
 <div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -693,6 +745,19 @@ display(pd.DataFrame(mod4.C(), index=equation_names, columns=[r'$\varepsilon_t$'
 
 
 <div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -784,6 +849,19 @@ display(pd.DataFrame(mod4.C(), index=equation_names, columns=[r'$\varepsilon_t$'
 
 
 <div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -894,6 +972,19 @@ assert(np.all(np.abs(mod5.B_numeric() - mod5.B_analytic()) < 1e-10))
 
 
 <div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -985,6 +1076,19 @@ assert(np.all(np.abs(mod5.B_numeric() - mod5.B_analytic()) < 1e-10))
 
 
 <div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1222,6 +1326,19 @@ display(pd.DataFrame(reduced_mod1.C(), index=reduced_equation_names, columns=[r'
 
 
 <div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1243,6 +1360,19 @@ display(pd.DataFrame(reduced_mod1.C(), index=reduced_equation_names, columns=[r'
 
 
 <div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1269,6 +1399,19 @@ display(pd.DataFrame(reduced_mod1.C(), index=reduced_equation_names, columns=[r'
 
 
 <div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1295,6 +1438,19 @@ display(pd.DataFrame(reduced_mod1.C(), index=reduced_equation_names, columns=[r'
 
 
 <div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1552,6 +1708,19 @@ display(pd.DataFrame(
 
 
 <div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1708,7 +1877,9 @@ ax.plot(sim_observed[:,2], label='Consumption')
 
 ax.set_title('Simulated observed series')
 ax.xaxis.grid()
-ax.legend(loc='lower left');
+ax.legend(loc='lower left')
+
+fig.tight_layout();
 ```
 
 
@@ -1724,7 +1895,9 @@ ax.plot(sim_state[:,1], label='Technology shock')
 
 ax.set_title('Simulated unobserved states')
 ax.xaxis.grid()
-ax.legend(loc='lower left');
+ax.legend(loc='lower left')
+
+fig.tight_layout();
 ```
 
 
@@ -1778,7 +1951,7 @@ ax.plot(dates, econ_observed.consumption, label='Consumption')
 
 rec = recessions.resample('QS').last().ix[econ_observed.index[0]:,0].values
 ylim = ax.get_ylim()
-ax.fill_between(dates[:-3], ylim[0]+1e-5, ylim[1]-1e-5, rec, facecolor='k', alpha=0.1)
+ax.fill_between(dates, ylim[0]+1e-5, ylim[1]-1e-5, rec, facecolor='k', alpha=0.1)
 
 ax.xaxis.grid()
 ax.legend(loc='lower left');
@@ -1866,7 +2039,7 @@ class EstimateRBC1(sm.tsa.statespace.MLEModel):
         constrained = np.zeros(unconstrained.shape, unconstrained.dtype)
         
         # Discount rate is between 0 and 1
-        constrained[0] = 1 / (1 + np.exp(unconstrained[0])) - 1e-4
+        constrained[0] = max(1 / (1 + np.exp(unconstrained[0])) - 1e-4, 1e-4)
         # Technology shock persistence is between -1 and 1
         constrained[1] = unconstrained[1] / (1 + np.abs(unconstrained[1]))
         # Technology shock std. dev. is positive
@@ -1928,7 +2101,8 @@ sim_mod = EstimateRBC1(
     measurement_errors=True
 )
 
-sim_res = sim_mod.fit(maxiter=1000, information_matrix_type='oim')
+# sim_res = sim_mod.fit(maxiter=1000, information_matrix_type='oim')
+sim_res = sim_mod.fit(maxiter=1000)
 
 print sim_res.summary()
 ```
@@ -1936,35 +2110,41 @@ print sim_res.summary()
                                       Statespace Model Results                                  
     ============================================================================================
     Dep. Variable:     ['output' 'labor' 'consumption']   No. Observations:                  200
-    Model:                                 EstimateRBC1   Log Likelihood                4196.744
-    Date:                              Sun, 22 Jan 2017   AIC                          -8381.489
-    Time:                                      14:19:00   BIC                          -8361.699
-    Sample:                                           0   HQIC                         -8373.480
+    Model:                                 EstimateRBC1   Log Likelihood                3106.974
+    Date:                              Fri, 22 Sep 2017   AIC                          -6201.949
+    Time:                                      21:40:32   BIC                          -6182.159
+    Sample:                                           0   HQIC                         -6193.940
                                                   - 200                                         
     Covariance Type:                                opg                                         
     ================================================================================
                        coef    std err          z      P>|z|      [0.025      0.975]
     --------------------------------------------------------------------------------
-    beta             0.9500   2.37e-05   4.01e+04      0.000       0.950       0.950
-    rho              0.8500   2.74e-05    3.1e+04      0.000       0.850       0.850
-    sigma.vareps     0.0356      0.002     23.298      0.000       0.033       0.039
-    sigma2.y      6.394e-10   3.81e-08      0.017      0.987   -7.41e-08    7.53e-08
-    sigma2.n      1.595e-09   2.31e-08      0.069      0.945   -4.37e-08    4.69e-08
-    sigma2.c      6.893e-13   1.89e-08   3.65e-05      1.000    -3.7e-08     3.7e-08
+    beta             0.9501   8.52e-06   1.12e+05      0.000       0.950       0.950
+    rho              0.8502   3.85e-05   2.21e+04      0.000       0.850       0.850
+    sigma.vareps     0.0628   3.46e-08   1.82e+06      0.000       0.063       0.063
+    sigma2.y      1.109e-10   8.23e-09      0.013      0.989    -1.6e-08    1.62e-08
+    sigma2.n      1.114e-11    9.2e-09      0.001      0.999    -1.8e-08     1.8e-08
+    sigma2.c      1.215e-05   1.69e-05      0.717      0.473   -2.11e-05    4.54e-05
     ======================================================================================
-    Ljung-Box (Q):          40.67, 363.36, 411.14   Jarque-Bera (JB):     0.09, 0.31, 1.01
-    Prob(Q):                     0.44, 0.00, 0.00   Prob(JB):             0.95, 0.86, 0.60
-    Heteroskedasticity (H):      0.86, 1.39, 1.67   Skew:                -0.05, 0.08, 0.03
-    Prob(H) (two-sided):         0.54, 0.18, 0.04   Kurtosis:             2.95, 2.91, 2.66
+    Ljung-Box (Q):          40.68, 385.51, 385.73   Jarque-Bera (JB):     0.09, 0.77, 0.77
+    Prob(Q):                     0.44, 0.00, 0.00   Prob(JB):             0.95, 0.68, 0.68
+    Heteroskedasticity (H):      0.86, 1.66, 1.66   Skew:               -0.05, -0.05, 0.04
+    Prob(H) (two-sided):         0.54, 0.04, 0.04   Kurtosis:             2.95, 2.71, 2.71
     ======================================================================================
     
     Warnings:
     [1] Covariance matrix calculated using the outer product of gradients (complex-step).
+    [2] Covariance matrix is singular or near-singular, with condition number 2.23e+21. Standard errors may be unstable.
+
+
+    /Users/fulton/.virtualenvs/default/lib/python2.7/site-packages/ipykernel/__main__.py:75: RuntimeWarning: overflow encountered in exp
+    /Users/fulton/projects/statsmodels/statsmodels/base/model.py:511: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+      "Check mle_retvals", ConvergenceWarning)
 
 
 
 ```python
-fig, axes = plt.subplots(2, 1, figsize=(10,6))
+fig, axes = plt.subplots(2, 1, figsize=(13,7))
 
 # Filtered states confidence intervals
 states_cov = np.diagonal(sim_res.filtered_state_cov).T
@@ -2031,26 +2211,26 @@ print econ_res.summary()
                                       Statespace Model Results                                  
     ============================================================================================
     Dep. Variable:     ['output' 'labor' 'consumption']   No. Observations:                  124
-    Model:                                 EstimateRBC1   Log Likelihood                1443.086
-    Date:                              Sun, 22 Jan 2017   AIC                          -2874.172
-    Time:                                      14:19:01   BIC                          -2857.251
-    Sample:                                  04-01-1984   HQIC                         -2867.298
+    Model:                                 EstimateRBC1   Log Likelihood                1443.612
+    Date:                              Fri, 22 Sep 2017   AIC                          -2875.224
+    Time:                                      21:40:33   BIC                          -2858.303
+    Sample:                                  04-01-1984   HQIC                         -2868.351
                                            - 01-01-2015                                         
     Covariance Type:                                opg                                         
     ================================================================================
                        coef    std err          z      P>|z|      [0.025      0.975]
     --------------------------------------------------------------------------------
-    beta             0.9862      0.010    100.251      0.000       0.967       1.005
-    rho              0.9724      0.016     60.560      0.000       0.941       1.004
-    sigma.vareps     0.0024      0.000     11.098      0.000       0.002       0.003
-    sigma2.y      9.373e-06   2.62e-06      3.582      0.000    4.24e-06    1.45e-05
-    sigma2.n      2.493e-05    4.9e-06      5.088      0.000    1.53e-05    3.45e-05
-    sigma2.c      1.527e-05   2.06e-06      7.409      0.000    1.12e-05    1.93e-05
+    beta             0.9855      0.010    100.625      0.000       0.966       1.005
+    rho              0.9715      0.016     59.107      0.000       0.939       1.004
+    sigma.vareps     0.0024      0.000     10.853      0.000       0.002       0.003
+    sigma2.y      9.357e-06   2.67e-06      3.509      0.000    4.13e-06    1.46e-05
+    sigma2.n      2.449e-05   4.72e-06      5.184      0.000    1.52e-05    3.38e-05
+    sigma2.c       1.53e-05   2.08e-06      7.368      0.000    1.12e-05    1.94e-05
     =====================================================================================
-    Ljung-Box (Q):          39.62, 129.54, 47.33   Jarque-Bera (JB):    11.00, 0.13, 4.67
-    Prob(Q):                    0.49, 0.00, 0.20   Prob(JB):             0.00, 0.94, 0.10
-    Heteroskedasticity (H):     1.68, 0.87, 0.51   Skew:                0.28, -0.01, 0.40
-    Prob(H) (two-sided):        0.10, 0.65, 0.04   Kurtosis:             4.35, 2.85, 3.52
+    Ljung-Box (Q):          40.37, 125.36, 48.44   Jarque-Bera (JB):    10.59, 0.19, 4.74
+    Prob(Q):                    0.45, 0.00, 0.17   Prob(JB):             0.01, 0.91, 0.09
+    Heteroskedasticity (H):     1.69, 0.89, 0.51   Skew:                0.26, -0.09, 0.40
+    Prob(H) (two-sided):        0.10, 0.70, 0.04   Kurtosis:             4.34, 2.92, 3.53
     =====================================================================================
     
     Warnings:
@@ -2059,7 +2239,7 @@ print econ_res.summary()
 
 
 ```python
-fig, axes = plt.subplots(2, 1, figsize=(10,6))
+fig, axes = plt.subplots(2, 1, figsize=(13,7))
 
 # Filtered states confidence intervals
 states_cov = np.diagonal(econ_res.filtered_state_cov).T
@@ -2074,7 +2254,7 @@ lines, = ax.plot(dates, econ_res.filtered_state[1], label='Technology shock')
 ax.fill_between(dates, states_lower[1], states_upper[1], color=lines.get_color(), alpha=0.2)
 
 ylim = ax.get_ylim()
-ax.fill_between(dates[:-3], ylim[0]+1e-4, ylim[1]-1e-4, rec, facecolor='k', alpha=0.1)
+ax.fill_between(dates, ylim[0]+1e-4, ylim[1]-1e-4, rec, facecolor='k', alpha=0.1)
 
 ax.hlines(0, dates[0], dates[-1])
 
@@ -2094,7 +2274,7 @@ for i in range(econ_mod.k_endog):
     ax.fill_between(dates, forecasts_lower[i], forecasts_upper[i], color=lines.get_color(), alpha=0.1)
 
 ylim = ax.get_ylim()
-ax.fill_between(dates[:-3], ylim[0]+1e-4, ylim[1]-1e-4, rec, facecolor='k', alpha=0.1)
+ax.fill_between(dates, ylim[0]+1e-4, ylim[1]-1e-4, rec, facecolor='k', alpha=0.1)
 
 ax.hlines(0, dates[0], dates[-1])
 
