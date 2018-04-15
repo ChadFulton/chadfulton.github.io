@@ -219,7 +219,11 @@ def draw_posterior_sigma2(model, states, phi, mu, prior_params=(5, 0.05)):
 
 #### Sampling $\phi$
 
-We can apply a Metropolis step: generating a proposal value $\phi^*$ from $N(\hat \phi, V_\theta)$ and accepting the proposal with probability $\exp(g(\phi^*) - g(\phi^{(i-1)}))$, where:
+We can apply a Metropolis step: generating a proposal value $\phi^*$ from $N(\hat \phi, V_\theta)$ and accepting the proposal with probability
+
+$$\exp(g(\phi^*) - g(\phi^{(i-1)}))$$
+
+where:
 
 $$g(\phi) = \log \pi(\phi) - \frac{(h_1 - \mu)^2 (1 - \phi^2)}{2 \sigma_\eta^2} + \frac{1}{2} \log (1 - \phi^2)$$
 
@@ -292,7 +296,7 @@ $$
 P[s_t = i | \cdot] \propto q_i f_N( y_t^* | h_t + m_i - 1.2704, v_i^2)
 $$
 
-where $f_N( y_t^* | a, b)$ denotes the probability density at $y_t^*$ of a Gaussian random variable with mean $a$ and variance $b$.
+where $f_N( y_t^* \mid a, b)$ denotes the probability density at $y_t^*$ of a Gaussian random variable with mean $a$ and variance $b$.
 
 
 ```python
