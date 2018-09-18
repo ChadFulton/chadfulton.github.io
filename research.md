@@ -20,6 +20,10 @@ econometrics.
 - [Mechanics of linear quadratic Gaussian rational inattention tracking problems](#fulton_mechanics_ri_2017)
 - [Estimating time series models by state space methods in Python: Statsmodels](#est-ssm-py)
 
+## Selected presentations
+
+- [Estimating time series models by state space methods in Python: Statsmodels](#est-ssm-py) (Presentation at Securities and Exchange Commission)
+
 </section>
 
 <section id="fulton_static_ri_2017">
@@ -65,5 +69,9 @@ This paper describes an object oriented approach to the estimation of time serie
 - [Working paper (PDF)]({{ "/files/fulton_statsmodels_2017_v1.pdf" | relative_url }})
 - [Working paper (HTML)](https://chadfulton.github.io/fulton_statsmodels_2017/)
 - [Github Repository](https://github.com/ChadFulton/fulton_statsmodels_2017)
+
+### Presentations
+
+- [2018-09-15 - SEC]({{ "/files/fulton_statespace_sec_09-2018.pdf" | relative_url }})
 
 </section>
