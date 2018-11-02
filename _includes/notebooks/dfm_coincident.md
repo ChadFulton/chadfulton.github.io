@@ -26,7 +26,6 @@ import numpy as np
 import pandas as pd
 import statsmodels.api as sm
 import matplotlib.pyplot as plt
-import seaborn as sn
 
 np.set_printoptions(precision=4, suppress=True, linewidth=120)
 ```
@@ -63,14 +62,14 @@ HMRMT_growth = HMRMT.diff() / HMRMT.shift()
 sales = pd.Series(np.zeros(emp.shape[0]), index=emp.index)
 
 # Fill in the recent entries (1997 onwards)
-sales[CMRMT.index] = CMRMT
+sales[CMRMT.index] = CMRMT['CMRMT']
 
 # Backfill the previous entries (pre 1997)
-idx = sales.ix[:'1997-01-01'].index
+idx = sales.loc[:'1997-01-01'].index
 for t in range(len(idx)-1, 0, -1):
     month = idx[t]
     prev_month = idx[t-1]
-    sales.ix[prev_month] = sales.ix[month] / (1 + HMRMT_growth.ix[prev_month].values)
+    sales.loc[prev_month] = sales.loc[month] / (1 + HMRMT_growth.loc[prev_month].values)
 ```
 
 
@@ -81,7 +80,7 @@ dta.columns = ['indprod', 'income', 'sales', 'emp']
 
 
 ```python
-dta.ix[:, 'indprod':'emp'].plot(subplots=True, layout=(2, 2), figsize=(15, 6));
+dta.loc[:, 'indprod':'emp'].plot(subplots=True, layout=(2, 2), figsize=(15, 6));
 ```
 
 
@@ -160,7 +159,7 @@ Multivariate models can have a relatively large number of parameters, and it may
 
 ```python
 # Get the endogenous data
-endog = dta.ix['1979-02-01':, 'std_indprod':'std_emp']
+endog = dta.loc['1979-02-01':, 'std_indprod':'std_emp']
 
 # Create the model
 mod = sm.tsa.DynamicFactor(endog, k_factors=1, factor_order=2, error_order=2)
@@ -185,45 +184,45 @@ Here, one of the easy-to-interpret implications in this model is the persistence
 
 
 ```python
-print res.summary(separate_params=False)
+print(res.summary(separate_params=False))
 ```
 
                                                  Statespace Model Results                                            
     =================================================================================================================
     Dep. Variable:     ['std_indprod', 'std_income', 'std_sales', 'std_emp']   No. Observations:                  449
-    Model:                                 DynamicFactor(factors=1, order=2)   Log Likelihood               -2123.894
-                                                              + AR(2) errors   AIC                           4283.788
-    Date:                                                   Sun, 22 Jan 2017   BIC                           4357.714
-    Time:                                                           14:15:55   HQIC                          4312.928
+    Model:                                 DynamicFactor(factors=1, order=2)   Log Likelihood               -2166.252
+                                                              + AR(2) errors   AIC                           4368.504
+    Date:                                                   Thu, 01 Nov 2018   BIC                           4442.431
+    Time:                                                           20:36:59   HQIC                          4397.644
     Sample:                                                       02-01-1979                                         
                                                                 - 06-01-2016                                         
     Covariance Type:                                                     opg                                         
     ====================================================================================================
                                            coef    std err          z      P>|z|      [0.025      0.975]
     ----------------------------------------------------------------------------------------------------
-    loading.f1.std_indprod              -0.6193      0.045    -13.675      0.000      -0.708      -0.531
-    loading.f1.std_income               -0.2449      0.036     -6.774      0.000      -0.316      -0.174
-    loading.f1.std_sales                -0.3900      0.029    -13.467      0.000      -0.447      -0.333
-    loading.f1.std_emp                  -0.4205      0.042     -9.996      0.000      -0.503      -0.338
-    sigma2.std_indprod                   0.2760      0.039      7.165      0.000       0.201       0.352
-    sigma2.std_income                    0.8598      0.028     30.785      0.000       0.805       0.915
-    sigma2.std_sales                     0.5457      0.042     13.116      0.000       0.464       0.627
-    sigma2.std_emp                       0.2735      0.025     10.995      0.000       0.225       0.322
-    L1.f1.f1                             0.4741      0.097      4.899      0.000       0.284       0.664
-    L2.f1.f1                             0.2398      0.084      2.843      0.004       0.074       0.405
-    L1.e(std_indprod).e(std_indprod)    -0.4335      0.106     -4.099      0.000      -0.641      -0.226
-    L2.e(std_indprod).e(std_indprod)    -0.1852      0.079     -2.354      0.019      -0.339      -0.031
-    L1.e(std_income).e(std_income)      -0.1987      0.023     -8.639      0.000      -0.244      -0.154
-    L2.e(std_income).e(std_income)      -0.0945      0.045     -2.086      0.037      -0.183      -0.006
-    L1.e(std_sales).e(std_sales)        -0.6220      0.050    -12.348      0.000      -0.721      -0.523
-    L2.e(std_sales).e(std_sales)        -0.2900      0.052     -5.613      0.000      -0.391      -0.189
-    L1.e(std_emp).e(std_emp)             0.2820      0.040      7.120      0.000       0.204       0.360
-    L2.e(std_emp).e(std_emp)             0.4970      0.046     10.772      0.000       0.407       0.587
+    loading.f1.std_indprod              -0.9107      0.022    -40.920      0.000      -0.954      -0.867
+    loading.f1.std_income               -0.2645      0.044     -6.042      0.000      -0.350      -0.179
+    loading.f1.std_sales                -0.4968      0.029    -17.183      0.000      -0.554      -0.440
+    loading.f1.std_emp                  -0.2866      0.032     -9.079      0.000      -0.349      -0.225
+    sigma2.std_indprod                7.687e-06   2.12e-05      0.362      0.718    -3.4e-05    4.93e-05
+    sigma2.std_income                    0.9061      0.029     31.755      0.000       0.850       0.962
+    sigma2.std_sales                     0.6374      0.040     16.036      0.000       0.559       0.715
+    sigma2.std_emp                       0.3746      0.015     25.262      0.000       0.345       0.404
+    L1.f1.f1                             0.2269      0.039      5.839      0.000       0.151       0.303
+    L2.f1.f1                             0.2687      0.043      6.241      0.000       0.184       0.353
+    L1.e(std_indprod).e(std_indprod)    -1.8906      0.005   -349.478      0.000      -1.901      -1.880
+    L2.e(std_indprod).e(std_indprod)    -0.9978      0.005   -190.052      0.000      -1.008      -0.988
+    L1.e(std_income).e(std_income)      -0.1493      0.021     -7.268      0.000      -0.190      -0.109
+    L2.e(std_income).e(std_income)      -0.0849      0.043     -1.957      0.050      -0.170       0.000
+    L1.e(std_sales).e(std_sales)        -0.6201      0.042    -14.693      0.000      -0.703      -0.537
+    L2.e(std_sales).e(std_sales)        -0.2656      0.047     -5.676      0.000      -0.357      -0.174
+    L1.e(std_emp).e(std_emp)             0.3078      0.035      8.682      0.000       0.238       0.377
+    L2.e(std_emp).e(std_emp)             0.4752      0.029     16.421      0.000       0.418       0.532
     =========================================================================================================
-    Ljung-Box (Q):          72.03, 26.97, 49.92, 77.45   Jarque-Bera (JB):   271.75, 15618.63, 13.51, 4946.36
-    Prob(Q):                    0.00, 0.94, 0.14, 0.00   Prob(JB):                     0.00, 0.00, 0.00, 0.00
-    Heteroskedasticity (H):     0.71, 4.54, 0.48, 0.40   Skew:                        0.35, -1.24, 0.06, 0.96
-    Prob(H) (two-sided):        0.04, 0.00, 0.00, 0.00   Kurtosis:                   6.74, 31.79, 3.84, 19.15
+    Ljung-Box (Q):          94.60, 35.83, 46.13, 76.61   Jarque-Bera (JB):   202.98, 10336.31, 19.57, 4327.94
+    Prob(Q):                    0.00, 0.66, 0.23, 0.00   Prob(JB):                     0.00, 0.00, 0.00, 0.00
+    Heteroskedasticity (H):     0.79, 4.74, 0.42, 0.41   Skew:                       0.10, -1.00, -0.09, 0.85
+    Prob(H) (two-sided):        0.15, 0.00, 0.00, 0.00   Kurtosis:                   6.29, 26.42, 4.01, 18.11
     =========================================================================================================
     
     Warnings:
@@ -251,7 +250,7 @@ ax.plot(dates, res.factors.filtered[0], label='Factor')
 ax.legend()
 
 # Retrieve and also plot the NBER recession indicators
-rec = DataReader('USREC', 'fred', start=start, end=end)
+rec = DataReader('USREC', 'fred', start=endog.index[0], end=end)
 ylim = ax.get_ylim()
 ax.fill_between(dates[:len(rec)], ylim[0], ylim[1], rec.values[:,0], facecolor='k', alpha=0.1);
 ```
@@ -310,7 +309,7 @@ def compute_coincident_index(mod, res):
     )).dot(ss_kalman_gain)[0]
 
     # Compute the factor mean vector
-    factor_mean = np.dot(W1, dta.ix['1972-02-01':, 'dln_indprod':'dln_emp'].mean())
+    factor_mean = np.dot(W1, dta.loc['1972-02-01':, 'dln_indprod':'dln_emp'].mean())
     
     # Normalize the factors
     factor = res.factors.filtered[0]
@@ -328,7 +327,7 @@ def compute_coincident_index(mod, res):
     coincident_index = pd.Series(coincident_index, index=dta.index).iloc[1:]
     
     # Normalize to use the same base year as USPHCI
-    coincident_index *= (usphci.ix['1992-07-01'] / coincident_index.ix['1992-07-01'])
+    coincident_index *= (usphci.loc['1992-07-01'] / coincident_index.loc['1992-07-01'])
     
     return coincident_index
 ```
@@ -701,55 +700,55 @@ The most important reason we need to specify a new `update` method is because we
 extended_mod = ExtendedDFM(endog)
 initial_extended_res = extended_mod.fit(method='powell', disp=False)
 extended_res = extended_mod.fit(initial_extended_res.params, maxiter=1000)
-print extended_res.summary(separate_params=False)
+print(extended_res.summary(separate_params=False))
 ```
 
                                                  Statespace Model Results                                            
     =================================================================================================================
     Dep. Variable:     ['std_indprod', 'std_income', 'std_sales', 'std_emp']   No. Observations:                  449
-    Model:                                 DynamicFactor(factors=1, order=4)   Log Likelihood               -2109.326
-                                                              + AR(2) errors   AIC                           4264.653
-    Date:                                                   Sun, 22 Jan 2017   BIC                           4359.114
-    Time:                                                           14:16:07   HQIC                          4301.887
+    Model:                                 DynamicFactor(factors=1, order=4)   Log Likelihood               -2150.818
+                                                              + AR(2) errors   AIC                           4347.635
+    Date:                                                   Thu, 01 Nov 2018   BIC                           4442.097
+    Time:                                                           20:39:23   HQIC                          4384.869
     Sample:                                                       02-01-1979                                         
                                                                 - 06-01-2016                                         
     Covariance Type:                                                     opg                                         
     ====================================================================================================
                                            coef    std err          z      P>|z|      [0.025      0.975]
     ----------------------------------------------------------------------------------------------------
-    loading.f1.std_indprod              -0.5990      0.051    -11.745      0.000      -0.699      -0.499
-    loading.f1.std_income               -0.2349      0.037     -6.409      0.000      -0.307      -0.163
-    loading.f1.std_sales                -0.3794      0.032    -11.835      0.000      -0.442      -0.317
-    loading.f1.std_emp                  -0.4353      0.038    -11.322      0.000      -0.511      -0.360
-    sigma2.std_indprod                   0.2757      0.043      6.460      0.000       0.192       0.359
-    sigma2.std_income                    0.8634      0.028     30.776      0.000       0.808       0.918
-    sigma2.std_sales                     0.5352      0.041     13.189      0.000       0.456       0.615
-    sigma2.std_emp                       0.2471      0.024     10.196      0.000       0.200       0.295
-    L1.f1.f1                             0.5473      0.113      4.842      0.000       0.326       0.769
-    L2.f1.f1                             0.1707      0.098      1.733      0.083      -0.022       0.364
-    L3.f1.f1                                  0   1.73e-10          0      1.000   -3.39e-10    3.39e-10
-    L4.f1.f1                                  0   1.73e-10          0      1.000   -3.39e-10    3.39e-10
-    L1.e(std_indprod).e(std_indprod)    -0.4763      0.110     -4.349      0.000      -0.691      -0.262
-    L2.e(std_indprod).e(std_indprod)    -0.2078      0.077     -2.694      0.007      -0.359      -0.057
-    L1.e(std_income).e(std_income)      -0.2016      0.023     -8.690      0.000      -0.247      -0.156
-    L2.e(std_income).e(std_income)      -0.0958      0.045     -2.123      0.034      -0.184      -0.007
-    L1.e(std_sales).e(std_sales)        -0.6285      0.051    -12.422      0.000      -0.728      -0.529
-    L2.e(std_sales).e(std_sales)        -0.2896      0.051     -5.730      0.000      -0.389      -0.191
-    L1.e(std_emp).e(std_emp)             0.2661      0.052      5.133      0.000       0.165       0.368
-    L2.e(std_emp).e(std_emp)             0.4662      0.057      8.200      0.000       0.355       0.578
-    loading.L1.f1.std_emp                0.0601      0.056      1.077      0.282      -0.049       0.170
-    loading.L2.f1.std_emp               -0.0651      0.051     -1.269      0.204      -0.166       0.035
-    loading.L3.f1.std_emp               -0.1378      0.033     -4.146      0.000      -0.203      -0.073
+    loading.f1.std_indprod              -0.9101      0.022    -41.783      0.000      -0.953      -0.867
+    loading.f1.std_income               -0.2574      0.045     -5.687      0.000      -0.346      -0.169
+    loading.f1.std_sales                -0.4970      0.029    -17.434      0.000      -0.553      -0.441
+    loading.f1.std_emp                  -0.3219      0.030    -10.598      0.000      -0.381      -0.262
+    sigma2.std_indprod                2.551e-05   8.54e-05      0.299      0.765      -0.000       0.000
+    sigma2.std_income                    0.9108      0.028     32.137      0.000       0.855       0.966
+    sigma2.std_sales                     0.6394      0.040     16.160      0.000       0.562       0.717
+    sigma2.std_emp                       0.3480      0.014     24.645      0.000       0.320       0.376
+    L1.f1.f1                             0.2156      0.037      5.837      0.000       0.143       0.288
+    L2.f1.f1                             0.2841      0.045      6.277      0.000       0.195       0.373
+    L3.f1.f1                                  0    2.7e-09          0      1.000   -5.29e-09    5.29e-09
+    L4.f1.f1                                  0    2.7e-09          0      1.000   -5.29e-09    5.29e-09
+    L1.e(std_indprod).e(std_indprod)     0.8576      0.007    131.072      0.000       0.845       0.870
+    L2.e(std_indprod).e(std_indprod)    -0.9977      0.007   -150.635      0.000      -1.011      -0.985
+    L1.e(std_income).e(std_income)      -0.1497      0.021     -7.254      0.000      -0.190      -0.109
+    L2.e(std_income).e(std_income)      -0.0819      0.044     -1.881      0.060      -0.167       0.003
+    L1.e(std_sales).e(std_sales)        -0.6254      0.044    -14.241      0.000      -0.711      -0.539
+    L2.e(std_sales).e(std_sales)        -0.2642      0.047     -5.580      0.000      -0.357      -0.171
+    L1.e(std_emp).e(std_emp)             0.2380      0.034      7.066      0.000       0.172       0.304
+    L2.e(std_emp).e(std_emp)             0.4559      0.034     13.457      0.000       0.390       0.522
+    loading.L1.f1.std_emp               -0.1321      0.031     -4.227      0.000      -0.193      -0.071
+    loading.L2.f1.std_emp               -0.1109      0.028     -3.983      0.000      -0.165      -0.056
+    loading.L3.f1.std_emp               -0.1035      0.030     -3.483      0.000      -0.162      -0.045
     =========================================================================================================
-    Ljung-Box (Q):          67.73, 27.16, 51.11, 67.55   Jarque-Bera (JB):   250.10, 15507.40, 12.37, 3968.45
-    Prob(Q):                    0.00, 0.94, 0.11, 0.00   Prob(JB):                     0.00, 0.00, 0.00, 0.00
-    Heteroskedasticity (H):     0.74, 4.54, 0.49, 0.41   Skew:                        0.32, -1.23, 0.05, 0.80
-    Prob(H) (two-sided):        0.07, 0.00, 0.00, 0.00   Kurtosis:                   6.60, 31.69, 3.81, 17.48
+    Ljung-Box (Q):          97.58, 35.92, 45.60, 84.98   Jarque-Bera (JB):   213.49, 10541.77, 22.69, 4367.84
+    Prob(Q):                    0.00, 0.65, 0.25, 0.00   Prob(JB):                     0.00, 0.00, 0.00, 0.00
+    Heteroskedasticity (H):     0.80, 4.84, 0.42, 0.37   Skew:                       0.06, -1.00, -0.06, 0.78
+    Prob(H) (two-sided):        0.17, 0.00, 0.00, 0.00   Kurtosis:                   6.38, 26.65, 4.09, 18.20
     =========================================================================================================
     
     Warnings:
     [1] Covariance matrix calculated using the outer product of gradients (complex-step).
-    [2] Covariance matrix is singular or near-singular, with condition number 2.79e+19. Standard errors may be unstable.
+    [2] Covariance matrix is singular or near-singular, with condition number 3.75e+17. Standard errors may be unstable.
 
 
 Although this model increases the likelihood, it is not preferred by the AIC and BIC mesaures which penalize the additional three parameters.

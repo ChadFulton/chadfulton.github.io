@@ -18,7 +18,7 @@ import statsmodels.api as sm
 from statsmodels.tools.numdiff import approx_fprime, approx_fprime_cs
 from IPython.display import display
 import matplotlib.pyplot as plt
-import seaborn as sn
+# import seaborn as sn
 
 from numpy.testing import assert_allclose
 
@@ -320,17 +320,17 @@ parameters.T
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -410,17 +410,17 @@ steady_state.T
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -529,17 +529,17 @@ steady_state.T
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -557,7 +557,7 @@ steady_state.T
   </thead>
   <tbody>
     <tr>
-      <th>analytic</th>
+      <th>numeric</th>
       <td>0.572</td>
       <td>0.506</td>
       <td>0.0663</td>
@@ -567,7 +567,7 @@ steady_state.T
       <td>1</td>
     </tr>
     <tr>
-      <th>numeric</th>
+      <th>analytic</th>
       <td>0.572</td>
       <td>0.506</td>
       <td>0.0663</td>
@@ -641,17 +641,17 @@ display(pd.DataFrame(mod4.C(), index=equation_names, columns=[r'$\varepsilon_t$'
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -745,17 +745,17 @@ display(pd.DataFrame(mod4.C(), index=equation_names, columns=[r'$\varepsilon_t$'
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -849,17 +849,17 @@ display(pd.DataFrame(mod4.C(), index=equation_names, columns=[r'$\varepsilon_t$'
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -972,17 +972,17 @@ assert(np.all(np.abs(mod5.B_numeric() - mod5.B_analytic()) < 1e-10))
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -1076,17 +1076,17 @@ assert(np.all(np.abs(mod5.B_numeric() - mod5.B_analytic()) < 1e-10))
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -1326,17 +1326,17 @@ display(pd.DataFrame(reduced_mod1.C(), index=reduced_equation_names, columns=[r'
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -1360,17 +1360,17 @@ display(pd.DataFrame(reduced_mod1.C(), index=reduced_equation_names, columns=[r'
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -1399,17 +1399,17 @@ display(pd.DataFrame(reduced_mod1.C(), index=reduced_equation_names, columns=[r'
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -1438,17 +1438,17 @@ display(pd.DataFrame(reduced_mod1.C(), index=reduced_equation_names, columns=[r'
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -1673,7 +1673,7 @@ reduced_mod2 = ReducedRBC2(parameters['value'])
 
 # Check the Blanchard-Kahn conditions
 eigenvalues, left_eigenvectors = ordered_jordan_decomposition(reduced_mod2.B())
-print 'Modulus of eigenvalues of B:', np.abs(eigenvalues.diagonal())
+print('Modulus of eigenvalues of B:', np.abs(eigenvalues.diagonal()))
 
 # Test the eigenvalues and eigenvectors
 # (results from "Emsm", downloaded from
@@ -1703,22 +1703,22 @@ display(pd.DataFrame(
 ).T)
 ```
 
-    Modulus of eigenvalues of B: [ 0.884  1.191]
+    Modulus of eigenvalues of B: [0.884 1.191]
 
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -1949,7 +1949,7 @@ ax.plot(dates, econ_observed.output, label='Output')
 ax.plot(dates, econ_observed.labor, label='Labor')
 ax.plot(dates, econ_observed.consumption, label='Consumption')
 
-rec = recessions.resample('QS').last().ix[econ_observed.index[0]:,0].values
+rec = recessions.resample('QS').last().loc[econ_observed.index[0]:].iloc[:, 0].values
 ylim = ax.get_ylim()
 ax.fill_between(dates, ylim[0]+1e-5, ylim[1]-1e-5, rec, facecolor='k', alpha=0.1)
 
@@ -2104,41 +2104,43 @@ sim_mod = EstimateRBC1(
 # sim_res = sim_mod.fit(maxiter=1000, information_matrix_type='oim')
 sim_res = sim_mod.fit(maxiter=1000)
 
-print sim_res.summary()
+print(sim_res.summary())
 ```
+
+    /Users/fulton/miniconda3/envs/python3/lib/python3.6/site-packages/ipykernel_launcher.py:75: RuntimeWarning: overflow encountered in exp
+
 
                                       Statespace Model Results                                  
     ============================================================================================
     Dep. Variable:     ['output' 'labor' 'consumption']   No. Observations:                  200
-    Model:                                 EstimateRBC1   Log Likelihood                3106.974
-    Date:                              Fri, 22 Sep 2017   AIC                          -6201.949
-    Time:                                      21:40:32   BIC                          -6182.159
-    Sample:                                           0   HQIC                         -6193.940
+    Model:                                 EstimateRBC1   Log Likelihood                3160.668
+    Date:                              Thu, 01 Nov 2018   AIC                          -6309.336
+    Time:                                      20:36:40   BIC                          -6289.546
+    Sample:                                           0   HQIC                         -6301.328
                                                   - 200                                         
     Covariance Type:                                opg                                         
     ================================================================================
                        coef    std err          z      P>|z|      [0.025      0.975]
     --------------------------------------------------------------------------------
-    beta             0.9501   8.52e-06   1.12e+05      0.000       0.950       0.950
-    rho              0.8502   3.85e-05   2.21e+04      0.000       0.850       0.850
-    sigma.vareps     0.0628   3.46e-08   1.82e+06      0.000       0.063       0.063
-    sigma2.y      1.109e-10   8.23e-09      0.013      0.989    -1.6e-08    1.62e-08
-    sigma2.n      1.114e-11    9.2e-09      0.001      0.999    -1.8e-08     1.8e-08
-    sigma2.c      1.215e-05   1.69e-05      0.717      0.473   -2.11e-05    4.54e-05
+    beta             0.9500   5.57e-06    1.7e+05      0.000       0.950       0.950
+    rho              0.8499    8.3e-05   1.02e+04      0.000       0.850       0.850
+    sigma.vareps     0.0440   1.23e-06   3.58e+04      0.000       0.044       0.044
+    sigma2.y      5.362e-10   5.39e-09      0.099      0.921      -1e-08    1.11e-08
+    sigma2.n      4.172e-05   8.27e-05      0.504      0.614      -0.000       0.000
+    sigma2.c       8.71e-13   4.81e-09      0.000      1.000   -9.43e-09    9.43e-09
     ======================================================================================
-    Ljung-Box (Q):          40.68, 385.51, 385.73   Jarque-Bera (JB):     0.09, 0.77, 0.77
-    Prob(Q):                     0.44, 0.00, 0.00   Prob(JB):             0.95, 0.68, 0.68
-    Heteroskedasticity (H):      0.86, 1.66, 1.66   Skew:               -0.05, -0.05, 0.04
-    Prob(H) (two-sided):         0.54, 0.04, 0.04   Kurtosis:             2.95, 2.71, 2.71
+    Ljung-Box (Q):          40.66, 0.21, 79.19   Jarque-Bera (JB):   0.09, 318540.26, 0.08
+    Prob(Q):                  0.44, 1.00, 0.00   Prob(JB):                0.95, 0.00, 0.96
+    Heteroskedasticity (H):   0.86, 0.00, 0.66   Skew:                  -0.05, 13.96, 0.04
+    Prob(H) (two-sided):      0.54, 0.00, 0.09   Kurtosis:              2.95, 196.51, 2.93
     ======================================================================================
     
     Warnings:
     [1] Covariance matrix calculated using the outer product of gradients (complex-step).
-    [2] Covariance matrix is singular or near-singular, with condition number 2.23e+21. Standard errors may be unstable.
+    [2] Covariance matrix is singular or near-singular, with condition number 5.64e+18. Standard errors may be unstable.
 
 
-    /Users/fulton/.virtualenvs/default/lib/python2.7/site-packages/ipykernel/__main__.py:75: RuntimeWarning: overflow encountered in exp
-    /Users/fulton/projects/statsmodels/statsmodels/base/model.py:511: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+    /Users/fulton/projects/statsmodels/statsmodels/base/model.py:508: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
       "Check mle_retvals", ConvergenceWarning)
 
 
@@ -2205,32 +2207,32 @@ econ_mod = EstimateRBC1(
 
 econ_res = econ_mod.fit(maxiter=1000, information_matrix_type='oim')
 
-print econ_res.summary()
+print(econ_res.summary())
 ```
 
                                       Statespace Model Results                                  
     ============================================================================================
     Dep. Variable:     ['output' 'labor' 'consumption']   No. Observations:                  124
-    Model:                                 EstimateRBC1   Log Likelihood                1443.612
-    Date:                              Fri, 22 Sep 2017   AIC                          -2875.224
-    Time:                                      21:40:33   BIC                          -2858.303
-    Sample:                                  04-01-1984   HQIC                         -2868.351
+    Model:                                 EstimateRBC1   Log Likelihood                1446.774
+    Date:                              Thu, 01 Nov 2018   AIC                          -2881.547
+    Time:                                      20:36:43   BIC                          -2864.625
+    Sample:                                  04-01-1984   HQIC                         -2874.673
                                            - 01-01-2015                                         
     Covariance Type:                                opg                                         
     ================================================================================
                        coef    std err          z      P>|z|      [0.025      0.975]
     --------------------------------------------------------------------------------
-    beta             0.9855      0.010    100.625      0.000       0.966       1.005
-    rho              0.9715      0.016     59.107      0.000       0.939       1.004
-    sigma.vareps     0.0024      0.000     10.853      0.000       0.002       0.003
-    sigma2.y      9.357e-06   2.67e-06      3.509      0.000    4.13e-06    1.46e-05
-    sigma2.n      2.449e-05   4.72e-06      5.184      0.000    1.52e-05    3.38e-05
-    sigma2.c       1.53e-05   2.08e-06      7.368      0.000    1.12e-05    1.94e-05
+    beta             0.9850      0.010     96.667      0.000       0.965       1.005
+    rho              0.9616      0.023     42.722      0.000       0.918       1.006
+    sigma.vareps     0.0022      0.000      9.797      0.000       0.002       0.003
+    sigma2.y       9.75e-06   2.58e-06      3.775      0.000    4.69e-06    1.48e-05
+    sigma2.n      2.398e-05   4.66e-06      5.143      0.000    1.48e-05    3.31e-05
+    sigma2.c      1.568e-05   2.16e-06      7.251      0.000    1.14e-05    1.99e-05
     =====================================================================================
-    Ljung-Box (Q):          40.37, 125.36, 48.44   Jarque-Bera (JB):    10.59, 0.19, 4.74
-    Prob(Q):                    0.45, 0.00, 0.17   Prob(JB):             0.01, 0.91, 0.09
-    Heteroskedasticity (H):     1.69, 0.89, 0.51   Skew:                0.26, -0.09, 0.40
-    Prob(H) (two-sided):        0.10, 0.70, 0.04   Kurtosis:             4.34, 2.92, 3.53
+    Ljung-Box (Q):          38.83, 120.95, 47.83   Jarque-Bera (JB):    16.90, 0.23, 3.25
+    Prob(Q):                    0.52, 0.00, 0.18   Prob(JB):             0.00, 0.89, 0.20
+    Heteroskedasticity (H):     1.68, 0.90, 0.53   Skew:                0.40, -0.11, 0.32
+    Prob(H) (two-sided):        0.10, 0.74, 0.05   Kurtosis:             4.62, 3.01, 3.46
     =====================================================================================
     
     Warnings:

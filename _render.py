@@ -72,7 +72,7 @@ def render():
 
             for www_name, v in resources['outputs'].items():
                 # Save the output file to the correct location
-                with open(www_name, 'w') as fw:
+                with open(www_name, 'wb') as fw:
                     fw.write(v)
 
             # Replace output paths to get relative urls
@@ -84,7 +84,7 @@ def render():
             outname = '%s.md' % name
             outpath = os.path.join(path_markdown, outname)
             with open(outpath, 'w') as fw:
-                fw.write(body.encode('utf-8'))
+                fw.write(body)
 
             # Construct the table of contents
             cmd = ("pandoc --template=_toc-template.md --toc -t html %s"
@@ -93,8 +93,8 @@ def render():
                                   stderr=subprocess.STDOUT)
             output = ps.communicate()[0]
             tocpath = os.path.join(path_toc, outname)
-            with open(tocpath, 'w') as fw:
-                fw.write(output.encode('utf-8'))
+            with open(tocpath, 'wb') as fw:
+                fw.write(output)
 
 if __name__ == '__main__':
     render()

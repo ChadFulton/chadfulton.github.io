@@ -127,6 +127,20 @@ The ``update`` method is called with a ``params`` vector holding the structural 
 
 
 ```python
+x = OrderedDict()
+x['a'] = 1
+list(x.keys()).index('a')
+```
+
+
+
+
+    0
+
+
+
+
+```python
 from collections import OrderedDict
 class SimpleRBC(sm.tsa.statespace.MLEModel):
 
@@ -145,7 +159,7 @@ class SimpleRBC(sm.tsa.statespace.MLEModel):
         self.k_predetermined = 1
 
         # Save the calibrated vs. estimated parameters
-        parameters = self.parameters.keys()
+        parameters = list(self.parameters.keys())
         calibrated = calibrated or {}
         self.calibrated = OrderedDict([
             (param, calibrated[param]) for param in parameters
@@ -168,13 +182,13 @@ class SimpleRBC(sm.tsa.statespace.MLEModel):
 
     @property
     def start_params(self):
-        structural_params = np.array(self.parameters.values())[self.idx_estimated]
+        structural_params = np.array(list(self.parameters.values()))[self.idx_estimated]
         measurement_variances = [0.1] * 3
         return np.r_[structural_params, measurement_variances]
 
     @property
     def param_names(self):
-        structural_params = np.array(self.parameters.keys())[self.idx_estimated]
+        structural_params = np.array(list(self.parameters.keys()))[self.idx_estimated]
         measurement_variances = ['%s.var' % name for name in self.endog_names]
         return structural_params.tolist() + measurement_variances
 
@@ -351,7 +365,7 @@ class SimpleRBC(sm.tsa.statespace.MLEModel):
         # Reconstruct the full parameter vector from the
         # estimated and calibrated parameters
         structural_params = np.zeros(self.k_params, dtype=params.dtype)
-        structural_params[self.idx_calibrated] = self.calibrated.values()
+        structural_params[self.idx_calibrated] = list(self.calibrated.values())
         structural_params[self.idx_estimated] = params[:self.k_estimated]
         measurement_variances = params[self.k_estimated:]
 
@@ -393,23 +407,23 @@ print(calibrated_res.summary())
                                        Statespace Model Results                                   
     ==============================================================================================
     Dep. Variable:     ['output', 'labor', 'consumption']   No. Observations:                  130
-    Model:                                      SimpleRBC   Log Likelihood                1221.724
-    Date:                                Sat, 28 Jan 2017   AIC                          -2437.447
-    Time:                                        14:20:15   BIC                          -2428.845
-    Sample:                                    04-01-1984   HQIC                         -2433.952
+    Model:                                      SimpleRBC   Log Likelihood                1226.745
+    Date:                                Thu, 01 Nov 2018   AIC                          -2447.489
+    Time:                                        20:35:50   BIC                          -2438.887
+    Sample:                                    04-01-1984   HQIC                         -2443.994
                                              - 07-01-2016                                         
     Covariance Type:                                  opg                                         
     ===================================================================================
                           coef    std err          z      P>|z|      [0.025      0.975]
     -----------------------------------------------------------------------------------
-    output.var       1.902e-11   6.65e-06   2.86e-06      1.000    -1.3e-05     1.3e-05
-    labor.var        3.928e-05   4.54e-06      8.660      0.000    3.04e-05    4.82e-05
-    consumption.var  1.516e-05   1.83e-06      8.287      0.000    1.16e-05    1.87e-05
+    output.var       6.449e-10   6.12e-06      0.000      1.000    -1.2e-05     1.2e-05
+    labor.var        3.783e-05   4.18e-06      9.054      0.000    2.96e-05     4.6e-05
+    consumption.var  1.462e-05   1.79e-06      8.166      0.000    1.11e-05    1.81e-05
     =====================================================================================
-    Ljung-Box (Q):          54.96, 147.38, 50.79   Jarque-Bera (JB):     8.58, 8.46, 7.85
-    Prob(Q):                    0.06, 0.00, 0.12   Prob(JB):             0.01, 0.01, 0.02
-    Heteroskedasticity (H):     1.09, 1.12, 0.52   Skew:               -0.19, -0.51, 0.54
-    Prob(H) (two-sided):        0.77, 0.71, 0.03   Kurtosis:             4.20, 3.72, 3.51
+    Ljung-Box (Q):          46.67, 140.06, 52.77   Jarque-Bera (JB):    6.89, 13.51, 7.85
+    Prob(Q):                    0.22, 0.00, 0.09   Prob(JB):             0.03, 0.00, 0.02
+    Heteroskedasticity (H):     1.24, 1.14, 0.47   Skew:               -0.08, -0.61, 0.53
+    Prob(H) (two-sided):        0.48, 0.66, 0.02   Kurtosis:             4.12, 3.99, 3.59
     =====================================================================================
     
     Warnings:
@@ -495,11 +509,11 @@ plot_irfs(calibrated_irfs);
 ```
 
 
-![png]({{ "/assets/notebooks/simple_rbc_files/output_12_0.png" | relative_url }})
+![png]({{ "/assets/notebooks/simple_rbc_files/output_13_0.png" | relative_url }})
 
 
 
-![png]({{ "/assets/notebooks/simple_rbc_files/output_12_1.png" | relative_url }})
+![png]({{ "/assets/notebooks/simple_rbc_files/output_13_1.png" | relative_url }})
 
 
 ## Maximum likelihood estimation
@@ -525,26 +539,26 @@ print(partial_res.summary())
                                        Statespace Model Results                                   
     ==============================================================================================
     Dep. Variable:     ['output', 'labor', 'consumption']   No. Observations:                  130
-    Model:                                      SimpleRBC   Log Likelihood                1494.643
-    Date:                                Sat, 28 Jan 2017   AIC                          -2979.285
-    Time:                                        14:27:04   BIC                          -2964.948
-    Sample:                                    04-01-1984   HQIC                         -2973.459
+    Model:                                      SimpleRBC   Log Likelihood                1501.123
+    Date:                                Thu, 01 Nov 2018   AIC                          -2992.246
+    Time:                                        20:35:53   BIC                          -2977.908
+    Sample:                                    04-01-1984   HQIC                         -2986.420
                                              - 07-01-2016                                         
     Covariance Type:                                  opg                                         
     ================================================================================================
                                        coef    std err          z      P>|z|      [0.025      0.975]
     ------------------------------------------------------------------------------------------------
-    technology_shock_persistence     0.9372      0.022     42.304      0.000       0.894       0.981
-    technology_shock_var          5.772e-06   1.02e-06      5.641      0.000    3.77e-06    7.78e-06
-    output.var                    1.054e-05   2.59e-06      4.062      0.000    5.45e-06    1.56e-05
-    labor.var                      3.41e-05   4.51e-06      7.568      0.000    2.53e-05    4.29e-05
-    consumption.var               1.483e-05   1.68e-06      8.839      0.000    1.15e-05    1.81e-05
-    =====================================================================================
-    Ljung-Box (Q):          39.52, 198.09, 50.97   Jarque-Bera (JB):   10.74, 6.94, 15.37
-    Prob(Q):                    0.49, 0.00, 0.11   Prob(JB):             0.00, 0.03, 0.00
-    Heteroskedasticity (H):     1.28, 1.15, 0.54   Skew:                0.06, -0.50, 0.69
-    Prob(H) (two-sided):        0.43, 0.64, 0.05   Kurtosis:             4.40, 3.52, 3.96
-    =====================================================================================
+    technology_shock_persistence     0.9329      0.023     40.397      0.000       0.888       0.978
+    technology_shock_var          5.491e-06   1.04e-06      5.277      0.000    3.45e-06    7.53e-06
+    output.var                    9.967e-06   2.67e-06      3.731      0.000    4.73e-06    1.52e-05
+    labor.var                      3.33e-05   4.31e-06      7.730      0.000    2.49e-05    4.17e-05
+    consumption.var               1.444e-05   1.64e-06      8.817      0.000    1.12e-05    1.77e-05
+    ======================================================================================
+    Ljung-Box (Q):          35.57, 193.85, 53.19   Jarque-Bera (JB):   12.25, 11.14, 16.40
+    Prob(Q):                    0.67, 0.00, 0.08   Prob(JB):              0.00, 0.00, 0.00
+    Heteroskedasticity (H):     1.36, 1.19, 0.50   Skew:                 0.14, -0.61, 0.69
+    Prob(H) (two-sided):        0.31, 0.58, 0.03   Kurtosis:              4.48, 3.75, 4.07
+    ======================================================================================
     
     Warnings:
     [1] Covariance matrix calculated using the outer product of gradients (complex-step).
@@ -557,11 +571,11 @@ plot_irfs(partial_irfs);
 ```
 
 
-![png]({{ "/assets/notebooks/simple_rbc_files/output_15_0.png" | relative_url }})
+![png]({{ "/assets/notebooks/simple_rbc_files/output_16_0.png" | relative_url }})
 
 
 
-![png]({{ "/assets/notebooks/simple_rbc_files/output_15_1.png" | relative_url }})
+![png]({{ "/assets/notebooks/simple_rbc_files/output_16_1.png" | relative_url }})
 
 
 ## Metropolis-within-Gibbs Sampling
@@ -627,7 +641,7 @@ loglike = None
 # Iterations
 for s in range(1, n_iterations + 1):
     if s % 1000 == 0:
-        print s
+        print(s)
     # Get the parameters from the trace
     discount_rate = 1 / (1 + (trace[s-1, 0] / 100))
     capital_share = trace[s-1, 1]
@@ -769,12 +783,12 @@ print(pd.DataFrame(
 
           Mode     Mean  5 percent  95 percent
     0    0.997    0.996      0.994       0.998
-    1    0.329    0.326      0.309       0.344
-    2    0.647    0.624      0.269       0.946
-    3 8.21e-05  8.3e-05   7.07e-05    9.52e-05
-    4 2.01e-05 2.11e-05   1.35e-05    2.97e-05
-    5 2.93e-05 3.02e-05   2.18e-05    4.09e-05
-    6 2.44e-05 2.45e-05   1.86e-05    3.15e-05
+    1     0.33    0.327      0.311       0.344
+    2    0.674    0.625      0.263       0.927
+    3 8.21e-05 8.34e-05   7.12e-05    9.75e-05
+    4    2e-05 2.07e-05   1.37e-05    2.97e-05
+    5 2.83e-05 2.95e-05   2.05e-05       4e-05
+    6 2.27e-05 2.38e-05   1.81e-05    3.01e-05
 
 
 ### Sampler output
@@ -784,7 +798,7 @@ print(pd.DataFrame(
 # Trace plots
 fig, axes = plt.subplots(2, 2, figsize=(13, 5), dpi=300)
 
-axes[0, 0].hist(final_trace[:, 0], bins=20, normed=True, alpha=1)
+axes[0, 0].hist(final_trace[:, 0], bins=20, density=True, alpha=1)
 X = np.linspace(0.990, 1.0-1e-4, 1000)
 Y = discount_kde(X)
 modes[0] = X[np.argmax(Y)]
@@ -793,7 +807,7 @@ ylim = axes[0, 0].get_ylim()
 vline = axes[0, 0].vlines(means[0], ylim[0], ylim[1], linewidth=2)
 axes[0, 0].set(title=r'Discount rate $\beta$')
 
-axes[0, 1].hist(final_trace[:, 1], bins=20, normed=True, alpha=1)
+axes[0, 1].hist(final_trace[:, 1], bins=20, density=True, alpha=1)
 X = np.linspace(0.280, 0.370, 1000)
 Y = cap_share_kde(X)
 modes[1] = X[np.argmax(Y)]
@@ -802,7 +816,7 @@ ylim = axes[0, 1].get_ylim()
 vline = axes[0, 1].vlines(means[1], ylim[0], ylim[1], linewidth=2)
 axes[0, 1].set(title=r'Capital share $\alpha$')
 
-axes[1, 0].hist(final_trace[:, 2], bins=20, normed=True, alpha=1)
+axes[1, 0].hist(final_trace[:, 2], bins=20, density=True, alpha=1)
 X = np.linspace(-0.2, 1-1e-4, 1000)
 Y = rho_kde(X)
 modes[2] = X[np.argmax(Y)]
@@ -811,7 +825,7 @@ ylim = axes[1, 0].get_ylim()
 vline = axes[1, 0].vlines(means[2], ylim[0], ylim[1], linewidth=2)
 axes[1, 0].set(title=r'Technology shock persistence $\rho$')
 
-axes[1, 1].hist(final_trace[:, 3], bins=20, normed=True, alpha=1)
+axes[1, 1].hist(final_trace[:, 3], bins=20, density=True, alpha=1)
 X = np.linspace(0.6e-4, 1.1e-4, 1000)
 Y = sigma2_kde(X)
 modes[3] = X[np.argmax(Y)]
@@ -829,7 +843,7 @@ fig.tight_layout()
 ```
 
 
-![png]({{ "/assets/notebooks/simple_rbc_files/output_20_0.png" | relative_url }})
+![png]({{ "/assets/notebooks/simple_rbc_files/output_21_0.png" | relative_url }})
 
 
 ### Model of the posterior median
@@ -847,27 +861,27 @@ gibbs_irfs = gibbs_res.impulse_responses(40, orthogonalized=True)*100
                                        Statespace Model Results                                   
     ==============================================================================================
     Dep. Variable:     ['output', 'labor', 'consumption']   No. Observations:                  130
-    Model:                                      SimpleRBC   Log Likelihood                1347.991
-    Date:                                Sat, 28 Jan 2017   AIC                          -2681.982
-    Time:                                        14:43:18   BIC                          -2661.910
-    Sample:                                    04-01-1984   HQIC                         -2673.826
+    Model:                                      SimpleRBC   Log Likelihood                1353.026
+    Date:                                Thu, 01 Nov 2018   AIC                          -2692.052
+    Time:                                        20:38:30   BIC                          -2671.979
+    Sample:                                    04-01-1984   HQIC                         -2683.895
                                              - 07-01-2016                                         
     Covariance Type:                                  opg                                         
     ================================================================================================
                                        coef    std err          z      P>|z|      [0.025      0.975]
     ------------------------------------------------------------------------------------------------
-    discount_rate                    0.9966      0.008    121.189      0.000       0.980       1.013
-    capital_share                    0.3261      0.177      1.846      0.065      -0.020       0.672
-    technology_shock_persistence     0.6360      0.393      1.617      0.106      -0.135       1.407
-    technology_shock_var          8.265e-05   7.37e-05      1.121      0.262   -6.18e-05       0.000
-    output.var                    2.063e-05    2.3e-05      0.897      0.370   -2.45e-05    6.57e-05
-    labor.var                     2.978e-05   2.09e-05      1.422      0.155   -1.13e-05    7.08e-05
-    consumption.var               2.434e-05    4.2e-06      5.795      0.000    1.61e-05    3.26e-05
+    discount_rate                    0.9963      0.008    118.930      0.000       0.980       1.013
+    capital_share                    0.3274      0.179      1.833      0.067      -0.023       0.677
+    technology_shock_persistence     0.6423      0.390      1.648      0.099      -0.122       1.406
+    technology_shock_var          8.303e-05   7.43e-05      1.117      0.264   -6.27e-05       0.000
+    output.var                    2.017e-05   2.09e-05      0.964      0.335   -2.08e-05    6.12e-05
+    labor.var                     2.909e-05   1.85e-05      1.570      0.116   -7.22e-06    6.54e-05
+    consumption.var               2.363e-05   4.14e-06      5.704      0.000    1.55e-05    3.18e-05
     =====================================================================================
-    Ljung-Box (Q):          39.55, 84.02, 57.85   Jarque-Bera (JB):     17.66, 0.06, 5.24
-    Prob(Q):                   0.49, 0.00, 0.03   Prob(JB):              0.00, 0.97, 0.07
-    Heteroskedasticity (H):    1.17, 0.80, 0.65   Skew:               -0.39, -0.05, -0.30
-    Prob(H) (two-sided):       0.60, 0.48, 0.16   Kurtosis:              4.63, 3.03, 3.78
+    Ljung-Box (Q):          35.26, 72.73, 58.06   Jarque-Bera (JB):     16.34, 0.66, 2.89
+    Prob(Q):                   0.68, 0.00, 0.03   Prob(JB):              0.00, 0.72, 0.24
+    Heteroskedasticity (H):    1.25, 0.83, 0.58   Skew:               -0.32, -0.11, -0.24
+    Prob(H) (two-sided):       0.47, 0.54, 0.08   Kurtosis:              4.62, 3.28, 3.55
     =====================================================================================
     
     Warnings:
@@ -881,9 +895,9 @@ plot_irfs(gibbs_irfs);
 ```
 
 
-![png]({{ "/assets/notebooks/simple_rbc_files/output_23_0.png" | relative_url }})
+![png]({{ "/assets/notebooks/simple_rbc_files/output_24_0.png" | relative_url }})
 
 
 
-![png]({{ "/assets/notebooks/simple_rbc_files/output_23_1.png" | relative_url }})
+![png]({{ "/assets/notebooks/simple_rbc_files/output_24_1.png" | relative_url }})
 
