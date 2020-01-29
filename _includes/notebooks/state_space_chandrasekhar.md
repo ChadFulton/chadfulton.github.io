@@ -33,7 +33,7 @@ where $y_t$ is a $p \times 1$ vector and $\alpha_t$ is an $m \times 1$ vector.
 Each iteration of the Kalman filter, say at time $t$, can be split into three parts:
 
 1. **Initialization**: specification of $a_t$ and $P_t$ that define the conditional state distribution, $\alpha_t \mid y^{t-1} \sim N(a_t, P_t)$.
-2. **Updating**: computation of $a_{t|t}$ and $P_{t|t}$ that define the conditional state distribution, $\alpha_t \mid y^{t} \sim N(a_{t|t}, P_{t|t})$.
+2. **Updating**: computation of $a_{t \mid t}$ and $P_{t \mid t}$ that define the conditional state distribution, $\alpha_t \mid y^{t} \sim N(a_{t \mid t}, P_{t \mid t})$.
 3. **Prediction**: computation of $a_{t+1}$ and $P_{t+1}$ that define the conditional state distribution, $\alpha_{t+1} \mid y^{t} \sim N(a_{t+1}, P_{t+1})$.
 
 Of course after the first iteration, the prediction part supplies the values required for initialization of the next step.
@@ -42,12 +42,12 @@ Focusing on the prediction step, the Kalman filter recursions yield:
 
 $$
 \begin{aligned}
-a_{t+1} & = T a_{t|t} \\
-P_{t+1} & = T P_{t|t} T' + R Q R' \\
+a_{t+1} & = T a_{t \mid t} \\
+P_{t+1} & = T P_{t \mid t} T' + R Q R' \\
 \end{aligned}
 $$
 
-where the matrices $T$ and $P_{t|t}$ are each $m \times m$, where $m$ is the size of the state vector $\alpha$. In some cases, the state vector can become extremely large, which can imply that the matrix multiplications required to produce $P_{t+1}$ can be become computationally intensive.
+where the matrices $T$ and $P_{t \mid t}$ are each $m \times m$, where $m$ is the size of the state vector $\alpha$. In some cases, the state vector can become extremely large, which can imply that the matrix multiplications required to produce $P_{t+1}$ can be become computationally intensive.
 
 #### Example: seasonal autoregression
 
@@ -83,11 +83,11 @@ Q = \begin{bmatrix}
 \end{aligned}
 $$
 
-In an AR model with daily data that exhibits annual seasonality, we might want to fit a model that incorporates lags up to $r=365$, in which case the state vector would be at least $m = 365$. The matrices $T$ and $P_{t|t}$ then each have $365^2 = 133225$ elements, and so most of the time spent computing the likelihood function (via the Kalman filter) can become dominated by the matrix multiplications in the prediction step.
+In an AR model with daily data that exhibits annual seasonality, we might want to fit a model that incorporates lags up to $r=365$, in which case the state vector would be at least $m = 365$. The matrices $T$ and $P_{t \mid t}$ then each have $365^2 = 133225$ elements, and so most of the time spent computing the likelihood function (via the Kalman filter) can become dominated by the matrix multiplications in the prediction step.
 
 #### State space models and the Chandrasekhar recursions
 
-The Chandrasekhar recursions replace equation $P_{t+1} = T P_{t|t} T' + R Q R'$ with a different recursion:
+The Chandrasekhar recursions replace equation $P_{t+1} = T P_{t \mid t} T' + R Q R'$ with a different recursion:
 
 $$
 P_{t+1} = P_t + W_t M_t W_t'
