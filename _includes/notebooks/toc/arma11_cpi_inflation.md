@@ -8,4 +8,3 @@
         ARMA(1, 1)](#metropolis-hastings---arma1-1)
     -   [Gibbs Sampling - ARMA(1, 1)](#gibbs-sampling---arma1-1)
     -   [Expanded model: SARIMAX](#expanded-model-sarimax)
-

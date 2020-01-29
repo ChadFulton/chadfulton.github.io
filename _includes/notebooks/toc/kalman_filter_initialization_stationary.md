@@ -2,4 +2,3 @@
 -   [Stationary processes](#stationary-processes)
 -   [Lyapunov equations](#lyapunov-equations)
 -   [Final thoughts](#final-thoughts)
-

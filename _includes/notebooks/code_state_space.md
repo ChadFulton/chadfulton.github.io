@@ -1,4 +1,3 @@
-
 An astonishing variety of time series econometrics problems can
 be handled in one way or another by putting a model into state
 space form and applying the Kalman filter, providing optimal

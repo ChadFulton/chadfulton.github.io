@@ -1,4 +1,3 @@
-
 Python on Mac OS X has traditionally been a bit of a struggle, dealing with paths etc. to make sure the built-in Python (out of date) doesn't conflict with the Python I want to use (e.g. from Homebrew). Further complicating this, I had at various points installed Enthought EPD and Enthought Canopy. I'd like the state of Python on my computer to be less haphazard. To make that happen, I need to uninstall all Enthought products, and get everything cleaned out with respect to Homebrew, Xcode, and Virtualenv.
 
 <!-- TEASER_END -->

@@ -9,4 +9,3 @@
     -   [Gibbs Sampling - Local level](#gibbs-sampling---local-level)
     -   [Expanded model:
         UnobservedComponents](#expanded-model-unobservedcomponents)
-

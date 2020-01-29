@@ -26,4 +26,3 @@
             data](#estimation-on-simulated-data)
         -   [Estimation on observed data](#estimation-on-observed-data)
     -   [References](#references)
-

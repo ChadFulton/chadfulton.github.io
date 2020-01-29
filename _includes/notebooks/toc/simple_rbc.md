@@ -12,4 +12,3 @@
         -   [Sampler output](#sampler-output)
         -   [Model of the posterior
             median](#model-of-the-posterior-median)
-

@@ -1,4 +1,3 @@
-
 ## Markov switching dynamic regression models
 
 This notebook provides an example of the use of Markov switching models in Statsmodels to estimate dynamic regression models with changes in regime. It follows the examples in the Stata Markov switching documentation, which can be found at http://www.stata.com/manuals14/tsmswitch.pdf.

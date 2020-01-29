@@ -1,4 +1,3 @@
-
 This post demonstrates the use of the Self-Exciting Threshold Autoregression module I wrote for the [Statsmodels](https://github.com/statsmodels/statsmodels) Python package, to analyze the often-examined [Sunspots dataset](http://www.ngdc.noaa.gov/stp/solar/ssndata.html). In particular, I pick up where the Sunspots section of the Statsmodels [ARMA Notebook example](http://statsmodels.sourceforge.net/devel/examples/notebooks/generated/tsa_arma.html) leaves off, and look at estimation and forecasting of SETAR models.
 
 <!-- TEASER_END -->

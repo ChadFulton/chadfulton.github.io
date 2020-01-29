@@ -1,4 +1,3 @@
-
 # Stochastic volatility: Bayesian inference
 
 This notebook describes estimating the basic univariate stochastic volatility model with Bayesian methods via Markov chain monte carlo (MCMC) methods, as in Kim et al. (1998).

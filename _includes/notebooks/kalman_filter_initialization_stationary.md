@@ -1,4 +1,3 @@
-
 ### The initialization problem
 
 The Kalman filter is a recursion for optimally making inferences about an unknown state variable given a related observed variable. In particular, if the state variable at time $t$ is represented by $\alpha_t$, then the (linear, Gaussian) Kalman filter takes as input the mean and variance of that state conditional on observations up to time $t-1$ and provides as output the filtered mean and variance of the state at time $t$ and the predicted mean and variance of the state at time $t$.

@@ -1,4 +1,3 @@
-
 # Estimating a Real Business Cycle DSGE Model by Maximum Likelihood in Python
 
 This notebook demonstrates how to setup, solve, and estimate a simple real business cycle model in Python. The model is very standard; the setup and notation here is a hybrid of Ruge-Murcia (2007) and DeJong and Dave (2011).

@@ -8,4 +8,3 @@
         -   [Notes](#notes)
         -   [Pound / Dollar](#pound-dollar)
         -   [Fit remaining models](#fit-remaining-models)
-

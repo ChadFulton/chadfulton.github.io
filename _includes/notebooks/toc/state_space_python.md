@@ -2,4 +2,3 @@
 -   [Extensibility: Local Linear Trend
     Model](#extensibility-local-linear-trend-model)
 -   [Citations](#citations)
-

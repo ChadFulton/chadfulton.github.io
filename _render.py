@@ -87,8 +87,8 @@ def render():
                 fw.write(body)
 
             # Construct the table of contents
-            cmd = ("pandoc --template=_toc-template.md --toc -t html %s"
-                   " | pandoc -f html -t markdown" % outpath)
+            cmd = ("pandoc --template=_toc-template.md --toc -t markdown %s"
+                   % outpath)
             ps = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE,
                                   stderr=subprocess.STDOUT)
             output = ps.communicate()[0]

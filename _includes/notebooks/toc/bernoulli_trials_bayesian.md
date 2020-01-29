@@ -3,4 +3,3 @@
 -   [Likelihood function](#likelihood-function)
 -   [Prior](#prior)
 -   [Posterior](#posterior)
-

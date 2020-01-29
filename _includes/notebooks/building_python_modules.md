@@ -1,4 +1,3 @@
-
 ### Getting Started with Python Packaging
 
 The first two weeks of the state-space project have been dedicated to introducing the Kalman filter - which was written in Cython with calls to the BLAS and LAPACK libraries linked to in Scipy - into the Statsmodels build process. A future post may describe why it was not just written in pure Python (in brief, it is because the Kalman filter is a recursive algorithm with a loop over the number of entries in a dataset, where each loop involves many matrix operations on relatively small matrices). For now, though, the source `kalman_filter.pyx` needs to be "Cythonized" into `kalman_filter.c` and then compiled into (e.g.) `kalman_filter.so`, either when the package is installed using pip, or from source (e.g. `python setup.py install`).

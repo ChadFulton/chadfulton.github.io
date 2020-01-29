@@ -1,4 +1,3 @@
-
 This gives an example of the use of the Markov Switching Model that I wrote for the [Statsmodels](https://github.com/statsmodels/statsmodels) Python package, to replicate the treatment of Kim, Nelson, and Startz (1998) as given in Kim and Nelson (1999). This model demonstrates estimation with regime heteroskedasticity (switching of variances) and fixed means (all at zero).
 
 This is tested against Kim and Nelson's (1999) code (STCK_V3.OPT), which can be found at [http://econ.korea.ac.kr/~cjkim/SSMARKOV.htm](http://econ.korea.ac.kr/~cjkim/SSMARKOV.htm). It also corresponds to the examples of Markov-switching models from E-views 8, which can be found at [http://www.eviews.com/EViews8/ev8ecswitch_n.html#RegHet](http://www.eviews.com/EViews8/ev8ecswitch_n.html#RegHet).

@@ -8,4 +8,3 @@
     -   [Taylor rule with 2 or 3
         regimes](#taylor-rule-with-2-or-3-regimes)
     -   [Switching variances](#switching-variances)
-

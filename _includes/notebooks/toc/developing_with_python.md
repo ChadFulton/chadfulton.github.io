@@ -2,4 +2,3 @@
 -   [ScipySuperpack](#scipysuperpack)
 -   [Statsmodels](#statsmodels)
 -   [Code Standards](#code-standards)
-

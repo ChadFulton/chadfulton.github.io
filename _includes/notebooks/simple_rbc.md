@@ -1,4 +1,3 @@
-
 # Simple Real Business Cycle Model
 
 This notebook contains the example code from "State Space Estimation of Time Series Models in Python: Statsmodels" for the simple RBC model.

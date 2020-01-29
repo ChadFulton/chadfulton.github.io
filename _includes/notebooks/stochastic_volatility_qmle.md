@@ -1,4 +1,3 @@
-
 # Stochastic volatility: quasi-maximum likelihood
 
 This notebook describes estimating the basic univariate stochastic volatility model by quasi-maximum likelihood methods, as in Ruiz (1994) or Harvey et al. (1994), using the Python package statsmodels.

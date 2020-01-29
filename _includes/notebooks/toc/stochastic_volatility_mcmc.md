@@ -8,4 +8,3 @@
             posteriors](#sampling-from-the-conditional-posteriors)
         -   [MCMC](#mcmc)
         -   [Results](#results)
-

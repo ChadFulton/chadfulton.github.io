@@ -1,4 +1,3 @@
-
 # State space estimation in Python via Metropolis-Hastings
 
 This post demonstrates how to use the (http://www.statsmodels.org/) `tsa.statespace` package along with the [PyMC](https://pymc-devs.github.io/pymc/) to very simply estimate the parameters of a state space model via the Metropolis-Hastings algorithm (a Bayesian posterior simulation technique).

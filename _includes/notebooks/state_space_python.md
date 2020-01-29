@@ -1,4 +1,3 @@
-
 A baseline version of state space models in Python is now ready as a pull request to the Statsmodels project, at https://github.com/statsmodels/statsmodels/pull/1698. Before it's description, here is the general description of a state space model (See Durbin and Koopman 2012 for all notation):
 
 $$

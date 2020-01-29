@@ -1,4 +1,3 @@
-
 ## State space diagnostics
 
 It is important to run post-estimation diagnostics on all types of models. In state space models, if the model is correctly specified, the standardized one-step ahead forecast errors should be independent and identically Normally distributed. Thus, one way to assess whether or not the model adequately describes the data is to compute the standardized residuals and apply diagnostic tests to check that they meet these distributional assumptions.

@@ -3,4 +3,3 @@
 -   [Testing](#testing)
 -   [Bibliography](#bibliography)
 -   [Footnotes](#footnotes)
-

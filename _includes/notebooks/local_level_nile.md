@@ -1,4 +1,3 @@
-
 # Local level - Nile
 
 This notebook contains the example code from "State Space Estimation of Time Series Models in Python: Statsmodels" for the local level model of the Nile dataset.

@@ -12,4 +12,3 @@
         Metropolis-Hastings](#bayesian-estimation-metropolis-hastings-1)
     -   [Classical Estimation](#classical-estimation-1)
     -   [Forecasts](#forecasts)
-

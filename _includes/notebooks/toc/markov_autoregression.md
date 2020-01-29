@@ -6,4 +6,3 @@
         Switching](#kim-nelson-and-startz-1998-three-state-variance-switching)
     -   [Filardo (1994) Time-Varying Transition
         Probabilities](#filardo-1994-time-varying-transition-probabilities)
-
