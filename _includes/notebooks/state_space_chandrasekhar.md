@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 from pandas_datareader.data import DataReader
 ```
 
-Although most operations related to state space models rely on the Kalman filtering recursions, in some special cases one can use a separate method often called "Chandrasekhar recursions". These provide an alternative way to interatively compute the conditional moments of the state vector, and in some cases they can be substantially less computationally intensive than the Kalman filter recursions. For complete details, see the paper "Using the 'Chandrasekhar Recursions' for Likelihood Evaluation of DSGE Models" (Herbst, 2015). Here we just sketch the basic idea.
+Although most operations related to state space models rely on the Kalman filtering recursions, in some special cases one can use a separate method often called "Chandrasekhar recursions". These provide an alternative way to interatively compute the conditional moments of the state vector, and in some cases they can be substantially less computationally intensive than the Kalman filter recursions. For complete details, see the paper "Using the 'Chandrasekhar Recursions' for Likelihood Evaluation of DSGE Models" (Herbst, 2015) - a working paper version of the paper and replication code are available on [Ed Herbst's website](http://edherbst.net/research/). Here we just sketch the basic idea.
 
 #### State space models and the Kalman filter
 
@@ -33,7 +33,7 @@ where $y_t$ is a $p \times 1$ vector and $\alpha_t$ is an $m \times 1$ vector.
 Each iteration of the Kalman filter, say at time $t$, can be split into three parts:
 
 1. **Initialization**: specification of $a_t$ and $P_t$ that define the conditional state distribution, $\alpha_t \mid y^{t-1} \sim N(a_t, P_t)$.
-2. **Updating**: computation of $a_{t \mid t}$ and $P_{t \mid t}$ that define the conditional state distribution, $\alpha_t \mid y^{t} \sim N(a_{t \mid t}, P_{t \mid t})$.
+2. **Updating**: computation of $a_{t \mid t}$ and $P_{t \mid t}$ that define the conditional state distribution, $\alpha_t \mid y^{t} \sim N(a_{t \mid  t}, P_{t \mid t})$.
 3. **Prediction**: computation of $a_{t+1}$ and $P_{t+1}$ that define the conditional state distribution, $\alpha_{t+1} \mid y^{t} \sim N(a_{t+1}, P_{t+1})$.
 
 Of course after the first iteration, the prediction part supplies the values required for initialization of the next step.
