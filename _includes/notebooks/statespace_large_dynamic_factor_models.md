@@ -335,11 +335,11 @@ We extracted the information from the appendices above into CSV files, which we 
 
 ```python
 # Definitions from the Appendix for FRED-MD variables
-defn_m = pd.read_csv('fredmd_definitions.csv')
+defn_m = pd.read_csv('data/fredmd_definitions.csv')
 defn_m.index = defn_m.fred
 
 # Definitions from the Appendix for FRED-QD variables
-defn_q = pd.read_csv('fredqd_definitions.csv')
+defn_q = pd.read_csv('data/fredqd_definitions.csv')
 defn_q.index = defn_q.fred
 
 # Example of the information in these files:
