@@ -1,10 +1,29 @@
-#topics-notebooks
+/* Create two equal columns that floats next to each other */
+.topic
+    float: left
+    width: 50%
+    padding: 10px 30px
 
-    .rss-subscribe
-        font-weight: normal
-        font-size: 75%
-        font-family: "Open Sans", sans-serif
+.topic:nth-child(2)
+    border-right: 1px dashed #adadad
 
+/* Clear floats after the columns */
+.row:after
+    content: ""
+    display: table
+    clear: both
+
+.topics .lead-section
+    display: none
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px)
+    .topics .lead-section
+        display: block
+    .topic
+        width: 100%
+
+.topic
     ul li
         margin: 5px 0px
 
@@ -16,3 +35,11 @@
         a
             color: grey
             text-decoration: underline
+
+
+#topics-notebooks
+
+    .rss-subscribe
+        font-weight: normal
+        font-size: 75%
+        font-family: "Open Sans", sans-serif

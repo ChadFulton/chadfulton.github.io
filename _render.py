@@ -24,19 +24,20 @@ from traitlets.config import Config
 from nbconvert import MarkdownExporter
 
 
-def render():
-    path_notebooks = '_notebooks'
+def render(which='notebooks', rm=False):
+    path_notebooks = f'_{which}'
 
     # Clear the output directories
-    path_markdown = '_includes/notebooks'
-    path_toc = '_includes/notebooks/toc'
-    path_output = 'assets/notebooks'
+    path_markdown = f'_includes/notebooks'
+    path_toc = f'_includes/notebooks/toc'
+    path_output = f'assets/notebooks'
 
-    shutil.rmtree(path_markdown)
-    os.makedirs(path_markdown)
-    os.makedirs(path_toc)
-    shutil.rmtree(path_output)
-    os.makedirs(path_output)
+    if rm:
+        shutil.rmtree(path_markdown)
+        os.makedirs(path_markdown)
+        os.makedirs(path_toc)
+        shutil.rmtree(path_output)
+        os.makedirs(path_output)
 
     # Create new output
     for fname in os.listdir(path_notebooks):
@@ -96,5 +97,7 @@ def render():
             with open(tocpath, 'wb') as fw:
                 fw.write(output)
 
+
 if __name__ == '__main__':
-    render()
+    render(which='notebooks', rm=True)
+    render(which='sm-notebooks-2021', rm=False)
