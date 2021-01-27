@@ -3,8 +3,15 @@ layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
+  {% assign repo = "tsa-notebooks" %}
+  {% assign branch = "master" %}
+  {% if page.categories contains 'sm-notebooks-2021' %}
+    {% assign repo = "sm-notebooks-2021" %}
+    {% assign branch = "main" %}
+  {% endif %}
+
   <section class="post-header lead-section compact">
-    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}{% if page.notebook %}<span class="notebook-github-header">(<a href="https://github.com/ChadFulton/tsa-notebooks/blob/master/{{ page.notebook }}.ipynb">View / download notebook</a> | <a href="https://github.com/ChadFulton/tsa-notebooks/issues/new">Report a problem</a>)</span>{% endif %}</h1>
+    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}{% if page.notebook %}<span class="notebook-github-header">(<a href="https://colab.research.google.com/github/ChadFulton/{{ repo }}/blob/{{ branch }}/{{ page.notebook }}.ipynb" target="_blank">Open on Google Colab</a> | <a href="https://github.com/ChadFulton/{{ repo }}/blob/{{ branch }}/{{ page.notebook }}.ipynb">View / download notebook</a> | <a href="https://github.com/ChadFulton/{{ repo }}/issues/new">Report a problem</a>)</span>{% endif %}</h1>
     <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
 
     {% if page.superseded %}
@@ -48,8 +55,9 @@ layout: default
 
     <div class="notebook-github-footer">
     <ul>
-    <li><a href="https://github.com/ChadFulton/tsa-notebooks/blob/master/{{ page.notebook }}.ipynb">View or download this notebook on Github</a></li>
-    <li>Please <a href="https://github.com/ChadFulton/tsa-notebooks/issues/new">let me know if you noticed any bugs or problems with this notebook.</a></li>
+    <li><a href="https://colab.research.google.com/github/ChadFulton/{{ repo }}/blob/{{ branch }}/{{ page.notebook }}.ipynb" target="_blank">Open on Google Colab</a></li>
+    <li><a href="https://github.com/ChadFulton/{{ repo }}/blob/{{ branch }}/{{ page.notebook }}.ipynb">View or download this notebook on Github</a></li>
+    <li>Please <a href="https://github.com/ChadFulton/{{ repo }}/issues/new">let me know if you noticed any bugs or problems with this notebook.</a></li>
     </ul>
     </div>
   </section>
