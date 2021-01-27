@@ -1,3 +1,6 @@
 [submodule "_notebooks"]
 	path = _notebooks
 	url = https://github.com/chadfulton/tsa-notebooks
+[submodule "_sm-notebooks-2021"]
+	path = _sm-notebooks-2021
+	url = https://github.com/ChadFulton/sm-notebooks-2021.git
