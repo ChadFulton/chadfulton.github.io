@@ -14,21 +14,83 @@ permalink: /research.html
 My research focuses on rational inattention and applied time series
 econometrics.
 
+- [Research](#research)
+  - [Published papers](#published-papers)
+    - [Choosing what to pay attention to (2021)](#choosing-what-to-pay-attention-to-2021)
+    - [SciPy 1.0: fundamental algorithms for scientific computing in Python (2020)](#scipy-10-fundamental-algorithms-for-scientific-computing-in-python-2020)
+  - [Working papers](#working-papers)
+    - [Forecasting US inflation in real time (2021)](#forecasting-us-inflation-in-real-time-2021)
+    - [Mechanics of static quadratic Gaussian rational inattention tracking problems (2018)](#mechanics-of-static-quadratic-gaussian-rational-inattention-tracking-problems-2018)
+    - [Mechanics of linear quadratic Gaussian rational inattention tracking problems (2017)](#mechanics-of-linear-quadratic-gaussian-rational-inattention-tracking-problems-2017)
+    - [Estimating time series models by state space methods in Python: Statsmodels (2015)](#estimating-time-series-models-by-state-space-methods-in-python-statsmodels-2015)
+  - [Other research](#other-research)
+    - [Index of Common Inflation Expectations (2020)](#index-of-common-inflation-expectations-2020)
+
+</section>
+
+<div style="padding:0px 45px;padding-top:10px;margin-top:0px;border-top:1px solid #efefef;">
+
+## Published papers
+
+</div>
+
+<section id="fulton_choosing_2021">
+
+### Choosing what to pay attention to (2021)
+
+*Theoretical Economics, forthcoming*
+
+This paper presents a general framework for constructing and solving the
+multivariate static linear quadratic Gaussian (LQG) rational inattention
+tracking problem. We interpret the nature of the solution and the
+implied action of the agent, and we construct representations that
+formalize how the agent processes data. We apply our approach to a
+price-setting problem and a portfolio choice problem - two popular
+rational inattention models found in the literature for which
+simplifying assumptions have thus far been required to produce a
+tractable model. In contrast to prior results, which have been limited
+to cases that restrict the number of underlying shocks or their
+correlation structure, we present general solutions. In each case, we
+show that imposing such restrictions impacts the form and interpretation
+of solutions and implies suboptimal decision-making by agents.
+
+- <a href="https://econtheory.org/ojs/index.php/te/article/viewForthcomingFile/3850/30749/1" onclick="trackOutboundLink('https://econtheory.org/ojs/index.php/te/article/viewForthcomingFile/3850/30749/1'); return false;">Working paper version (PDF)</a>
+
+</section>
+
+<section id="virtanen_scipy_2020">
+
+### SciPy 1.0: fundamental algorithms for scientific computing in Python (2020)
+
+*Nature methods, 2021*, with Pauli Virtanen, Ralf Gommers, and 108 others
+
+SciPy is an open-source scientific computing library for the Python programming language. Since its initial release in 2001, SciPy has become a de facto standard for leveraging scientific algorithms in Python, with over 600 unique code contributors, thousands of dependent packages, over 100,000 dependent repositories and millions of downloads per year. In this work, we provide an overview of the capabilities and development practices of SciPy 1.0 and highlight some recent technical developments.
+
+- <a href="https://www.nature.com/articles/s41592-019-0686-2?es_p=11046330" onclick="trackOutboundLink('[https://econtheory.org/ojs/index.php/te/article/viewForthcomingFile/3850/30749/1'); return false;](https://www.nature.com/articles/s41592-019-0686-2?es_p=11046330)">Published version</a>
+
+</section>
+
+<div style="padding:0px 45px;">
+
 ## Working papers
 
-- [Mechanics of static quadratic Gaussian rational inattention tracking problems](#fulton_static_ri_2017)
-- [Mechanics of linear quadratic Gaussian rational inattention tracking problems](#fulton_mechanics_ri_2017)
-- [Estimating time series models by state space methods in Python: Statsmodels](#est-ssm-py)
+</div>
 
-## Selected presentations
+<section id="fulton_forecasting_2021">
 
-- [Estimating time series models by state space methods in Python: Statsmodels](#est-ssm-py) (Presentation at Securities and Exchange Commission)
+### Forecasting US inflation in real time (2021)
+
+with [Kirstin Hubrich](https://sites.google.com/site/kirstinhubrichwebpage/)
+
+We perform a real-time forecasting exercise for US inflation, investigating whether and how additional information--additional macroeconomic variables, expert judgment, or forecast combination--can improve forecast accuracy and robustness. In our analysis we consider the pre-pandemic period including the Global Financial Crisis and the following expansion--the longest on record--featuring unemployment that fell to a rate not seen for nearly sixty years. Distinguishing features of our study include the use of published Federal Reserve Board staff forecasts contained in Tealbooks and a focus on forecasting performance before, during, and after the Global Financial Crisis, with relevance also for the current crisis and beyond. We find that while simple models remain hard to beat, the additional information that we consider can improve forecasts, especially in the post-crisis period. Our results show that (1) forecast combination approaches improve forecast accuracy over simpler models and robustify against bad forecasts, a particularly relevant feature in the current environment; (2) aggregating forecasts of inflation components can improve performance compared to forecasting the aggregate directly; (3) judgmental forecasts, which likely incorporate larger and more timely datasets, provide improved forecasts at short horizons.
+
+- <a href="https://www.federalreserve.gov/econres/feds/files/2021014pap.pdf" onclick="trackOutboundLink('https://www.federalreserve.gov/econres/feds/files/2021014pap.pdf'); return false;">Working paper (PDF)</a>
 
 </section>
 
 <section id="fulton_static_ri_2017">
 
-## Mechanics of static quadratic Gaussian rational inattention tracking problems
+### Mechanics of static quadratic Gaussian rational inattention tracking problems (2018)
 
 This paper presents a general framework for constructing and solving the
 multivariate static linear quadratic Gaussian (LQG) rational inattention
@@ -50,7 +112,7 @@ of solutions and implies suboptimal decision-making by agents.
 
 <section id="fulton_mechanics_ri_2017">
 
-## Mechanics of linear quadratic Gaussian rational inattention tracking problems
+### Mechanics of linear quadratic Gaussian rational inattention tracking problems (2017)
 
 **Note**: *This is an previous version of the working paper [Mechanics of static quadratic Gaussian rational inattention tracking problems](#fulton_static_ri_2017), although it contains some sections not included there. In particular, it expands on the dynamic case and provides more detail on the equilibrium solution to the rational inattetion price-setting problem.*
 
@@ -62,7 +124,7 @@ This paper presents a general framework for constructing and solving the multiva
 
 <section id="est-ssm-py">
 
-## Estimating time series models by state space methods in Python: Statsmodels
+### Estimating time series models by state space methods in Python: Statsmodels (2015)
 
 This paper describes an object oriented approach to the estimation of time series models using state space methods and presents an implementation in the Python programming language. This approach at once allows for fast computation, a variety of out-of-the-box features, and easy extensibility. We show how to construct a custom state space model, retrieve filtered and smoothed estimates of the unobserved state, and perform parameter estimation using classical and Bayesian methods. The mapping from theory to implementation is presented explicitly and is illustrated at each step by the development of three example models: an ARMA(1,1) model, the local level model, and a simple real business cycle macroeconomic model. Finally, four fully implemented time series models are presented: SARIMAX, VARMAX, unobserved components, and dynamic factor models. These models can immediately be applied by users.
 
@@ -70,8 +132,23 @@ This paper describes an object oriented approach to the estimation of time serie
 - [Working paper (HTML)](https://chadfulton.github.io/fulton_statsmodels_2017/)
 - [Github Repository](https://github.com/ChadFulton/fulton_statsmodels_2017)
 
-### Presentations
+</section>
 
-- [2018-09-15 - SEC]({{ "/files/fulton_statespace_sec_09-2018.pdf" | relative_url }})
+<div style="padding:0px 45px;">
+
+## Other research
+
+</div>
+
+<section id="ahn_index_2020">
+
+### Index of Common Inflation Expectations (2020)
+
+with [Hie Joo Ahn](https://sites.google.com/site/hiejooahn/)
+
+This note develops a new index of common inflation expectations that summarizes the comovement of various inflation expectation indicators based on a dynamic factor model. This index suggests that inflation expectations were relatively stable between 1999 and 2012, and then experienced a downward shift that persisted, despite some fluctuations, at least through the beginning of the COVID-19 pandemic in early 2020. Since then it has successfully captured pandemic-driven concerns, first falling on fears of a prolonged recession, and then rising as the US economy has recovered and anxiety about inflation has grown.
+
+- <a href="https://www.federalreserve.gov/econres/notes/feds-notes/index-of-common-inflation-expectations-20200902.htm" onclick="trackOutboundLink('https://www.federalreserve.gov/econres/notes/feds-notes/index-of-common-inflation-expectations-20200902.htm'); return false;">FEDS Note (HTML)</a>
+- <a href="https://www.federalreserve.gov/econres/notes/feds-notes/research-data-series-index-of-common-inflation-expectations-20210305.htm" onclick="trackOutboundLink('https://www.federalreserve.gov/econres/notes/feds-notes/research-data-series-index-of-common-inflation-expectations-20210305.htm'); return false;">Estimated index (updated quarterly)</a>
 
 </section>

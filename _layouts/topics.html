@@ -5,7 +5,7 @@ layout: default
 <div class="topics">
 
   <section id="topics" class="lead-section compact">
-  
+
   <h2>Table of contents</h2>
 
   <ul>
@@ -34,7 +34,7 @@ layout: default
 
   {% if post.categories contains 'sm-notebooks-2021' %}
   {% else %}
-    
+
   {% assign post_year = post.date | date: "%Y" %}
   {% if post_year != prev_year %}
     {% assign prev_year = post_year %}
@@ -65,8 +65,7 @@ layout: default
   aren't always enough examples of how and when to use it, and, worse, older
   examples can become outdated. This set of example notebooks is intended to
   showcase some of the ways that Statsmodels can be used for data science and
-  econometrics, with a plan to add new notebooks approximately every week in
-  2021.</p>
+  econometrics.</p>
 
   <h3>Notebooks</h3>
 
