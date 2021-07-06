@@ -40,19 +40,18 @@ econometrics.
 
 *Theoretical Economics, forthcoming*
 
-This paper presents a general framework for constructing and solving the
-multivariate static linear quadratic Gaussian (LQG) rational inattention
-tracking problem. We interpret the nature of the solution and the
-implied action of the agent, and we construct representations that
-formalize how the agent processes data. We apply our approach to a
-price-setting problem and a portfolio choice problem - two popular
-rational inattention models found in the literature for which
-simplifying assumptions have thus far been required to produce a
-tractable model. In contrast to prior results, which have been limited
-to cases that restrict the number of underlying shocks or their
-correlation structure, we present general solutions. In each case, we
-show that imposing such restrictions impacts the form and interpretation
-of solutions and implies suboptimal decision-making by agents.
+This paper studies static rational inattention problems with multiple
+actions and multiple shocks. We solve for the optimal signals chosen by
+agents and provide tools to interpret information processing. By relaxing
+restrictive assumptions previously used to gain tractability, we allow
+agents more latitude to choose what to pay attention to. Our applications
+examine the pricing problem of a monopolist who sells in multiple markets
+and the portfolio problem of an investor who can invest in multiple assets.
+The more general models that our methods allow us to solve yield new
+results. We show conditions under which the multimarket monopolist would
+optimally choose a uniform pricing strategy, and we show how optimal
+information processing by rationally inattentive investors can be
+interpreted as learning about the Sharpe ratio of a diversified portfolio.
 
 - <a href="https://econtheory.org/ojs/index.php/te/article/viewForthcomingFile/3850/30749/1" onclick="trackOutboundLink('https://econtheory.org/ojs/index.php/te/article/viewForthcomingFile/3850/30749/1'); return false;">Working paper version (PDF)</a>
 
