@@ -16,10 +16,11 @@ econometrics.
 
 - [Research](#research)
   - [Published papers](#published-papers)
-    - [Choosing what to pay attention to (2021)](#choosing-what-to-pay-attention-to-2021)
+    - [Choosing what to pay attention to (2022)](#choosing-what-to-pay-attention-to-2021)
+    - [Forecasting US inflation in real time (2022)](#forecasting-us-inflation-in-real-time-2021)
+    - [Bayesian Estimation and Forecasting of Time Series in statsmodels (2022)](#bayesian-estimation-and-forecasting-of-time-series-in-statsmodels-2022)
     - [SciPy 1.0: fundamental algorithms for scientific computing in Python (2020)](#scipy-10-fundamental-algorithms-for-scientific-computing-in-python-2020)
   - [Working papers](#working-papers)
-    - [Forecasting US inflation in real time (2021)](#forecasting-us-inflation-in-real-time-2021)
     - [Mechanics of static quadratic Gaussian rational inattention tracking problems (2018)](#mechanics-of-static-quadratic-gaussian-rational-inattention-tracking-problems-2018)
     - [Mechanics of linear quadratic Gaussian rational inattention tracking problems (2017)](#mechanics-of-linear-quadratic-gaussian-rational-inattention-tracking-problems-2017)
     - [Estimating time series models by state space methods in Python: Statsmodels (2015)](#estimating-time-series-models-by-state-space-methods-in-python-statsmodels-2015)
@@ -36,9 +37,9 @@ econometrics.
 
 <section id="fulton_choosing_2021">
 
-### Choosing what to pay attention to (2021)
+### Choosing what to pay attention to (2022)
 
-*Theoretical Economics, forthcoming*
+*Theoretical Economics, 2022*
 
 This paper studies static rational inattention problems with multiple
 actions and multiple shocks. We solve for the optimal signals chosen by
@@ -53,7 +54,34 @@ optimally choose a uniform pricing strategy, and we show how optimal
 information processing by rationally inattentive investors can be
 interpreted as learning about the Sharpe ratio of a diversified portfolio.
 
+- <a href="https://onlinelibrary.wiley.com/doi/full/10.3982/TE3850" onclick="trackOutboundLink('https://onlinelibrary.wiley.com/doi/full/10.3982/TE3850'); return false;">Published version (PDF)</a>
 - <a href="https://econtheory.org/ojs/index.php/te/article/viewForthcomingFile/3850/30749/1" onclick="trackOutboundLink('https://econtheory.org/ojs/index.php/te/article/viewForthcomingFile/3850/30749/1'); return false;">Working paper version (PDF)</a>
+
+</section>
+
+<section id="fulton_forecasting_2021">
+
+### Forecasting US inflation in real time (2022)
+
+*Econometrics, 2022*, with [Kirstin Hubrich](https://sites.google.com/site/kirstinhubrichwebpage/)
+
+We analyze real-time forecasts of US inflation over 1999Q3–2019Q4 and subsamples, investigating whether and how forecast accuracy and robustness can be improved with additional information such as expert judgment, additional macroeconomic variables, and forecast combination. The forecasts include those from the Federal Reserve Board’s Tealbook, the Survey of Professional Forecasters, dynamic models, and combinations thereof. While simple models remain hard to beat, additional information does improve forecasts, especially after 2009. Notably, forecast combination improves forecast accuracy over simpler models and robustifies against bad forecasts; aggregating forecasts of inflation’s components can improve performance compared to forecasting the aggregate directly; and judgmental forecasts, which may incorporate larger and more timely datasets in conjunction with model-based forecasts, improve forecasts at short horizons.
+
+- <a href="https://www.mdpi.com/2225-1146/9/4/36" onclick="trackOutboundLink('https://www.mdpi.com/2225-1146/9/4/36'); return false;">Published version (PDF)</a>
+- <a href="https://www.federalreserve.gov/econres/feds/files/2021014pap.pdf" onclick="trackOutboundLink('https://www.federalreserve.gov/econres/feds/files/2021014pap.pdf'); return false;">Working paper version (PDF)</a>
+
+</section>
+
+<section id="bayesian-estimation-and-forecasting-of-time-series-in-statsmodels-2022">
+
+### Bayesian Estimation and Forecasting of Time Series in statsmodels (2022)
+
+*Proceedings of the 21st Python in Science Conference, 2022*
+
+Statsmodels, a Python library for statistical and econometric analysis, has traditionally focused on frequentist inference, including in its models for time series data. This paper introduces the powerful features for Bayesian inference of time series models that exist in statsmodels, with applications to model fitting, forecasting, time series decomposition, data simulation, and impulse response functions.
+
+- <a href="https://conference.scipy.org/proceedings/scipy2022/chad_fulton.html" onclick="trackOutboundLink('https://conference.scipy.org/proceedings/scipy2022/chad_fulton.html'); return false;">Published version</a>
+- <a href="https://github.com/ChadFulton/scipy2022-bayesian-time-series" onclick="trackOutboundLink('https://github.com/ChadFulton/scipy2022-bayesian-time-series'); return false;">Github Repository</a>
 
 </section>
 
@@ -61,11 +89,11 @@ interpreted as learning about the Sharpe ratio of a diversified portfolio.
 
 ### SciPy 1.0: fundamental algorithms for scientific computing in Python (2020)
 
-*Nature methods, 2021*, with Pauli Virtanen, Ralf Gommers, and 108 others
+*Nature methods, 2020*, with Pauli Virtanen, Ralf Gommers, and 108 others
 
 SciPy is an open-source scientific computing library for the Python programming language. Since its initial release in 2001, SciPy has become a de facto standard for leveraging scientific algorithms in Python, with over 600 unique code contributors, thousands of dependent packages, over 100,000 dependent repositories and millions of downloads per year. In this work, we provide an overview of the capabilities and development practices of SciPy 1.0 and highlight some recent technical developments.
 
-- <a href="https://www.nature.com/articles/s41592-019-0686-2?es_p=11046330" onclick="trackOutboundLink('[https://econtheory.org/ojs/index.php/te/article/viewForthcomingFile/3850/30749/1'); return false;](https://www.nature.com/articles/s41592-019-0686-2?es_p=11046330)">Published version</a>
+- <a href="https://www.nature.com/articles/s41592-019-0686-2?es_p=11046330" onclick="trackOutboundLink('https://www.nature.com/articles/s41592-019-0686-2?es_p=11046330'); return false;">Published version</a>
 
 </section>
 
@@ -74,18 +102,6 @@ SciPy is an open-source scientific computing library for the Python programming 
 ## Working papers
 
 </div>
-
-<section id="fulton_forecasting_2021">
-
-### Forecasting US inflation in real time (2021)
-
-with [Kirstin Hubrich](https://sites.google.com/site/kirstinhubrichwebpage/)
-
-We perform a real-time forecasting exercise for US inflation, investigating whether and how additional information--additional macroeconomic variables, expert judgment, or forecast combination--can improve forecast accuracy and robustness. In our analysis we consider the pre-pandemic period including the Global Financial Crisis and the following expansion--the longest on record--featuring unemployment that fell to a rate not seen for nearly sixty years. Distinguishing features of our study include the use of published Federal Reserve Board staff forecasts contained in Tealbooks and a focus on forecasting performance before, during, and after the Global Financial Crisis, with relevance also for the current crisis and beyond. We find that while simple models remain hard to beat, the additional information that we consider can improve forecasts, especially in the post-crisis period. Our results show that (1) forecast combination approaches improve forecast accuracy over simpler models and robustify against bad forecasts, a particularly relevant feature in the current environment; (2) aggregating forecasts of inflation components can improve performance compared to forecasting the aggregate directly; (3) judgmental forecasts, which likely incorporate larger and more timely datasets, provide improved forecasts at short horizons.
-
-- <a href="https://www.federalreserve.gov/econres/feds/files/2021014pap.pdf" onclick="trackOutboundLink('https://www.federalreserve.gov/econres/feds/files/2021014pap.pdf'); return false;">Working paper (PDF)</a>
-
-</section>
 
 <section id="fulton_static_ri_2017">
 
