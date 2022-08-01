@@ -35,7 +35,7 @@ econometrics.
 
 </div>
 
-<section id="fulton_choosing_2021">
+<section id="choosing-what-to-pay-attention-to-2021">
 
 ### Choosing what to pay attention to (2022)
 
@@ -59,7 +59,7 @@ interpreted as learning about the Sharpe ratio of a diversified portfolio.
 
 </section>
 
-<section id="fulton_forecasting_2021">
+<section id="forecasting-us-inflation-in-real-time-2021">
 
 ### Forecasting US inflation in real time (2022)
 
@@ -85,7 +85,7 @@ Statsmodels, a Python library for statistical and econometric analysis, has trad
 
 </section>
 
-<section id="virtanen_scipy_2020">
+<section id="scipy-10-fundamental-algorithms-for-scientific-computing-in-python-2020">
 
 ### SciPy 1.0: fundamental algorithms for scientific computing in Python (2020)
 
@@ -103,7 +103,7 @@ SciPy is an open-source scientific computing library for the Python programming 
 
 </div>
 
-<section id="fulton_static_ri_2017">
+<section id="mechanics-of-static-quadratic-gaussian-rational-inattention-tracking-problems-2018">
 
 ### Mechanics of static quadratic Gaussian rational inattention tracking problems (2018)
 
@@ -125,7 +125,7 @@ of solutions and implies suboptimal decision-making by agents.
 
 </section>
 
-<section id="fulton_mechanics_ri_2017">
+<section id="mechanics-of-linear-quadratic-gaussian-rational-inattention-tracking-problems-2017">
 
 ### Mechanics of linear quadratic Gaussian rational inattention tracking problems (2017)
 
@@ -137,7 +137,7 @@ This paper presents a general framework for constructing and solving the multiva
 
 </section>
 
-<section id="est-ssm-py">
+<section id="estimating-time-series-models-by-state-space-methods-in-python-statsmodels-2015">
 
 ### Estimating time series models by state space methods in Python: Statsmodels (2015)
 
@@ -155,7 +155,7 @@ This paper describes an object oriented approach to the estimation of time serie
 
 </div>
 
-<section id="ahn_index_2020">
+<section id="index-of-common-inflation-expectations-2020">
 
 ### Index of Common Inflation Expectations (2020)
 
